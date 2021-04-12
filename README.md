@@ -40,3 +40,7 @@ $ node index.js
 ## Credits 📍
 * Nah, itu semua ada dalam sejarah komit
 Jangan ragu untuk membuka permintaan tarik jika ada menemukam kesalahan
+
+## Thanks to
+* AraAra [Team]
+* [RYNZ](https://github.com/riyan3334)
