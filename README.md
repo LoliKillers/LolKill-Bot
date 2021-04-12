@@ -15,16 +15,26 @@ Jika Anda mem-forking repo ini, jangan lupa untuk memberi tanda bintang - <img a
 ## Install yang di butuhkan
 
 ```sh
-$ git clone https://github.com/Zer0-Tw0/AsunaBot
-
-$ cd AsunaBot
-
-$ pip3 install -U -r requirements.txt
-
-$ cp sample_config.py config.py
+$ pkg update -y
+$ pkg upgrade -y
+$ pkg install bash -y
+$ pkg install git -y
 ```
-Edit **config.py** with your own values
+## Install ara bot
 
+```sh
+$ git clone https://github.com/Zer0-Tw0/Ara
+$ cd Ara
+$ bash install.sh
+$ node index.js
+Tinggal scan kode qr!
+```
+## Menjalankan bot ulang
+
+```sh
+$ cd Ara
+$ node index.js
+```
 
 ## Credits 📍
 * Nah, itu semua ada dalam sejarah komit
