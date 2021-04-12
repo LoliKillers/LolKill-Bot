@@ -5,7 +5,7 @@
 # ARA BOT
 
 <p align="center">
-- x -|│  “	Hanya beberapa kode yang merupakan bot untuk bersenang-senang! ”  │| - x -
+☆ " Hanya beberapa kode yang merupakan bot untuk bersenang-senang! " ☆
 </p>
 
 * Ara bot Link:  <a href="https://wa.me/6285852335038" alt="Ara"> <img src="https://img.shields.io/badge/%F0%9F%A4%96%20-AraBot-brightgreen" /> </a>
@@ -27,6 +27,7 @@ $ git clone https://github.com/Zer0-Tw0/Ara
 $ cd Ara
 $ bash install.sh
 $ node index.js
+
 Tinggal scan kode qr!
 ```
 ## Menjalankan bot ulang
