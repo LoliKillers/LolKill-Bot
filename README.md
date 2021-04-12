@@ -44,3 +44,4 @@ Jangan ragu untuk membuka permintaan tarik jika ada menemukam kesalahan
 ## Thanks to
 * AraAra [Team]
 * [RYNZ](https://github.com/riyan3334)
+* [NAYLA](https://github.com/naylachan)
