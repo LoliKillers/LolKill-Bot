@@ -1,13 +1,12 @@
-// Yaelah om mau ngapain
+/* KALO MAU AMBIL AMBIL AJA BANG
+ * TAPI JANGAN HAPUS TQTO!!
+ * 
+ * THX TO
+ * ITSMEKY
+ * ARAARA[TEAM]
+ * MEM ARA
+*/
 
-// SPESIAL THX TO
-// ITSMEIKY
-// AraAra [Team]
-// NAYLA
-// RYNZ
-
-// INGET BRO JANGAN HAPUS TQTONYA!!
-// BY ARIASW
 const {
    WAConnection,
    MessageType,
@@ -880,7 +879,6 @@ ara.on('group-participants-update', async (anu) => {
 ┣► *${prefix}buypremium*
 ┣► *${prefix}hargaprem*
 ┣► *${prefix}linkgc1*
-┣► *${prefix}sticker*
 ┗━━━━━━━━━━━►
 ┏━━► *「 APK MENU 」* 
 ┣► *${prefix}apkpure*
@@ -891,6 +889,7 @@ ara.on('group-participants-update', async (anu) => {
 ┏━━► *「 MEDSOS MENU 」* 
 ┣► *${prefix}github*
 ┣► *${prefix}twitter*
+┣► *${prefix}tiktokstalk*
 ┣► *${prefix}igstalk*
 ┗━━━━━━━━━━━►
 ┏━━► *「 GROUP MENU 」* 
@@ -920,6 +919,7 @@ ara.on('group-participants-update', async (anu) => {
 ┣► *${prefix}maling*
 ┣► *${prefix}nguli*
 ┣► *${prefix}sedekah*
+┣► *${prefix}level*
 ┗━━━━━━━━━━━►
 ┏━━► *「 OWNER MENU 」* 
 ┣► *${prefix}setprefix*
@@ -949,20 +949,100 @@ ara.on('group-participants-update', async (anu) => {
 ┣► *${prefix}foxnews*
 ┣► *${prefix}searchfilm*
 ┗━━━━━━━━━━━►
+┏━━► *「 MAKER MENU 」* 
+┣► *${prefix}attp*
+┣► *${prefix}nulis*
+┣► *${prefix}nulis2*
+┣► *${prefix}darkneon*
+┣► *${prefix}candlemug*
+┣► *${prefix}lovemsg*
+┣► *${prefix}mugflower*
+┣► *${prefix}shadowtext*
+┣► *${prefix}coffeecup*
+┣► *${prefix}coffeecup2*
+┣► *${prefix}underwater*
+┣► *${prefix}hpotter*
+┣► *${prefix}woodblock*
+┣► *${prefix}narutobanner*
+┣► *${prefix}romancetext*
+┣► *${prefix}paperonglass*
+┣► *${prefix}googletext*
+┣► *${prefix}glitchtext*
+┗━━━━━━━━━━━►
+┏━━► *「 SERTIFIKAT MENU 」* 
+┣► *${prefix}gay*
+┣► *${prefix}haram*
+┣► *${prefix}editod*
+┣► *${prefix}hekerserti*
+┣► *${prefix}ffserti*
+┣► *${prefix}ffserti2*
+┣► *${prefix}mlserti*
+┣► *${prefix}pubgserti*
+┗━━━━━━━━━━━►
+┏━━► *「 FUN MENU 」* 
+┣► *${prefix}gantengcek*
+┣► *${prefix}cantikcek*
+┣► *${prefix}sangecek*
+┣► *${prefix}gaycek*
+┣► *${prefix}lesbicek*
+┣► *${prefix}watak*
+┣► *${prefix}hobby*
+┣► *${prefix}apakah*
+┣► *${prefix}kapankah*
+┣► *${prefix}bisakah*
+┣► *${prefix}bagaimanakah*
+┣► *${prefix}rate*
+┣► *${prefix}fitnah*
+┣► *${prefix}alay*
+┣► *${prefix}fml*
+┣► *${prefix}katacinta*
+┣► *${prefix}pantun*
+┣► *${prefix}hilih*
+┣► *${prefix}hurufterbalik*
+┣► *${prefix}simi*
+┗━━━━━━━━━━━►
+┏━━► *「 DOWNLOAD MENU 」* 
+┣► *${prefix}ytmp3*
+┣► *${prefix}ytmp4*
+┣► *${prefix}play*
+┗━━━━━━━━━━━►
+┏━━► *「 RANDOM IMAGE 」* 
+┣► *${prefix}aesthetic*
+┣► *${prefix}fotocewek*
+┣► *${prefix}doraemon*
+┣► *${prefix}cecan*
+┣► *${prefix}cogan*
+┣► *${prefix}pokemon*
+┣► *${prefix}kucing*
+┣► *${prefix}hamster*
+┣► *${prefix}kelinci*
+┣► *${prefix}freefireimg*
+┣► *${prefix}ww2*
+┣► *${prefix}shota*
+┣► *${prefix}mobil*
+┣► *${prefix}motor*
+┗━━━━━━━━━━━►
+┏━━► *「 MEDIA MENU 」* 
+┣► *${prefix}brainly*
+┣► *${prefix}pinterest*
+┣► *${prefix}bitly*
+┣► *${prefix}tinyurl*
+┣► *${prefix}tts*
+┣► *${prefix}ssweb*
+┣► *${prefix}kbbi*
+┣► *${prefix}sticker*
+┣► *${prefix}lirik*
+┣► *${prefix}memeindo*
+┗━━━━━━━━━━━►
 
 ┏━━► *「 THANKS TO 」* 
 ┣► *ARIASW*
-┣► *ARIASW*
-┣► *NAYLA*
-┣► *RYNZ*
+┣► *AraAra [Team]*
 ┣► *MEM ARA*
 ┗━━━━━━━━━━━►
 
-📄NOTE : 
-*Jangan membanding bandingkan dengan Bot lain!!.*
-
 `
-                    ara.sendMessage(from, ppimg, image, { quoted: raa, caption: teks })
+                        ara.sendMessage(from, ppimg, image, { quoted: raa, caption: teks })
                         break
   ////////////////////
  // CASE INFO MENU //
@@ -1034,7 +1114,8 @@ ara.on('group-participants-update', async (anu) => {
 					ara.sendMessage(from, teks.trim(), extendedText, {quoted: raa, contextInfo: {"mentionedJid": blocked}})
 					break
 		case 'ping':
-					ara.sendMessage(from, '*Pongg!!!*',MessageType.text, { quoted: raa} )
+                    if (!isRegistered) return reply( ind.noregis())
+					await ara.sendMessage(from, `Pong!!!!\nSpeed: ${processTime(time, moment())} _Second_`)
 					break
 		case 'buypremium':
                     if (!isRegistered) return reply( ind.noregis())
@@ -1169,6 +1250,23 @@ ara.on('group-participants-update', async (anu) => {
 					ara.sendMessage(from, buffer, image, {caption: hasil, quoted: raa})
 					await limitAdd(sender)
 					break
+		case 'tiktokstalk':
+                    if (!isRegistered) return reply( ind.noregis())
+				    if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				    try {
+					if (args.length < 1) return ara.sendMessage(from, '*Username mana kak?', text, {quoted: mek})
+					let { user, stats } = await tiktod.getUserProfileInfo(args[0])
+				    costum('[❗] LOADING!', text, tescuk, ari)
+					teks = `*➤ID* : ${user.id}\n*➤Username* : ${user.uniqueId}\n*➤Nickname* : ${user.nickname}\n*➤Followers* : ${stats.followerCount}\n*➤Followings* : ${stats.followingCount}\n*➤Posts* : ${stats.videoCount}\n*➤Luv* : ${stats.heart}\n`
+					buffer = await getBuffer(user.avatarLarger)
+					ara.sendMessage(from, buffer, image, {quoted: raa, caption: teks})
+					} catch (e) {
+					console.log(`Error :`, color(e,'red'))
+					reply('*(ERROR)* *Kemungkinan username tidak valid*')
+					}
+					await limitAdd(sender)
+                    break
 
   //////////////////////
  // CASE INFORMATION //
@@ -1284,9 +1382,9 @@ ara.on('group-participants-update', async (anu) => {
 					if (args.length < 1) return reply(`Masukkan parameter!! \n${prefix}leveling 1 untuk mengaktifkan \n${prefix}leveling 0 untuk menonaktifkan`)
 					if (args[0] === '1') {
 					if (isLevelingOn) return reply('*Fitur level sudah aktif!!*')
-					reply('《 *SUCCSESS* 》 \nMenonaktifkan mode leveling di group ini ✔️')
+					_leveling.push(from)
 					fs.writeFileSync('./database/kelompok/leveling.json', JSON.stringify(_leveling))
-					reply(ind.lvlon())
+					reply('《 *SUCCSESS* 》 \nMengaktifkan mode nsfw di group ini ✔️')
 					} else if (args[0] === '0') {
 					_leveling.splice(from, 1)
 					fs.writeFileSync('./database/kelompok/leveling.json', JSON.stringify(_leveling))
@@ -1295,7 +1393,7 @@ ara.on('group-participants-update', async (anu) => {
 					reply(ind.satukos())
 					}
 					break
-        case 'nobadword':  // Fix Bug By PojanGanz
+        case 'nobadword': 
                     if (!isGroup) return reply(ind.groupo())
                     if (!isGroupAdmins) return reply(ind.admin())
 					if (args.length < 1) return reply(`Masukkan parameter!! \n${prefix}nobadword 1 untuk mengaktifkan \n${prefix}nobadword 0 untuk menonaktifkan`)
@@ -1566,70 +1664,22 @@ ara.on('group-participants-update', async (anu) => {
 					reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
 					}
 					break
-        case 'stickergif':
-	    case 'stikergif':
-		case 'sgif':
-		case 'stiker': 
-		case 'sticker':
-		case 's':
+		case 'level':
                     if (!isRegistered) return reply( ind.noregis())
-				    if (isLimit(sender)) return reply(ind.limitend(pusname))
-				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
-					await limitAdd(sender)
-					if ((isMedia && !raa.message.videoMessage || isQuotedImage) && args.length == 0) {
-					const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(raa).replace('quotedM','m')).message.extendedTextMessage.contextInfo : raa
-					const media = await ara.downloadAndSaveMediaMessage(encmedia)
-				    ran = getRandom('.webp')
-					await ffmpeg(`./${media}`)
-					.input(media)
-					.on('start', function (cmd) {
-					console.log(`Started : ${cmd}`)
+					if (!isLevelingOn) return reply(ind.lvlnoon())
+					if (!isGroup) return reply(ind.groupo())
+					const userLevel = getLevelingLevel(sender)
+					const userXp = getLevelingXp(sender)
+					if (userLevel === undefined && userXp === undefined) return reply(ind.lvlnul())
+					const requiredXp = 5000 * (Math.pow(2, userLevel) - 1)
+					resul = `◪ *LEVEL*\n  ├─➤ *Name* : ${pushname}\n  ├─➤ *Nomor* : ${sender.split("@")[0]}\n  ├─➤ *User XP* : ${userXp}/${requiredXp}\n  └─➤ *User Level* : ${userLevel}\n`
+					ara.sendMessage(from, resul, text, { quoted: raa})
+					.catch(async (err) => {
+					console.error(err)
+					await reply(`Error!\n${err}`)
 					})
-					.on('error', function (err) {
-					console.log(`Error : ${err}`)
-					fs.unlinkSync(media)
-					reply(ind.stikga())
-					})
-					.on('end', function () {
-					console.log('Finish')
-					buffer = fs.readFileSync(ran)
-					ara.sendMessage(from, buffer, sticker, {quoted: raa})
-					fs.unlinkSync(media)
-					fs.unlinkSync(ran)
-					})
-					.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-					.toFormat('webp')
-					.save(ran)
-					} else if ((isMedia && raa.message.videoMessage.seconds < 11 || isQuotedVideo && raa.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
-					const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(raa).replace('quotedM','m')).message.extendedTextMessage.contextInfo : raa
-					const media = await ara.downloadAndSaveMediaMessage(encmedia)
-					ran = getRandom('.webp')
-					reply(ind.wait())
-					await ffmpeg(`./${media}`)
-					.inputFormat(media.split('.')[1])
-					.on('start', function (cmd) {
-					console.log(`Started : ${cmd}`)
-				    })
-					.on('error', function (err) {
-					console.log(`Error : ${err}`)
-					fs.unlinkSync(media)
-					tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-					reply(ind.stikga())
-					})
-					.on('end', function () {
-					console.log('Finish')
-					buffer = fs.readFileSync(ran)
-					ara.sendMessage(from, buffer, sticker, {quoted: raa})
-					fs.unlinkSync(media)
-					fs.unlinkSync(ran)
-				    })
-					.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-					.toFormat('webp')
-					.save(ran)
-					} else {
-					reply(`Kirim gambar dengan caption ${prefix}sticker atau reply/tag gambar`)
-					}
-                    break
+					break
+
   /////////////////////
  // CASE OWNER MENU //
 /////////////////////
@@ -1810,7 +1860,7 @@ ara.on('group-participants-update', async (anu) => {
 					const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(raa).replace('quotedM','m')).message.extendedTextMessage.contextInfo : raa
 					buff = await ara.downloadMediaMessage(encmedia)
 					for (let _ of anu) {
-					neko.sendMessage(_.jid, buff, image, {caption: `*「 BROADCAST 」*\n\n${body.slice(4)}`})
+					ara.sendMessage(_.jid, buff, image, {caption: `*「 BROADCAST 」*\n\n${body.slice(4)}`})
 					}
 						reply('*Suksess broadcast* ')
 					} else {
@@ -1828,7 +1878,7 @@ ara.on('group-participants-update', async (anu) => {
 					mentioned = raa.message.extendedTextMessage.contextInfo.mentionedJid[0]
 					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
 					try {
-				    pp = await neko.getProfilePicture(id)
+				    pp = await ara.getProfilePicture(id)
 					buffer = await getBuffer(pp)
 					ara.updateProfilePicture(botNumber, buffer)
 					mentions(`Foto profile Berhasil di perbarui menggunakan foto profile @${id.split('@')[0]}`, [jid], true)
@@ -1865,6 +1915,830 @@ ara.on('group-participants-update', async (anu) => {
 					reply('Sukses broadcast group')
 					}
 					break 
+
+  ////////////////
+ // MAKER MENU //
+////////////////
+
+		case 'attp':
+				    if (args.length < 1) return reply(`_Teksnya Mana kak_\n*Contoh ${prefix}attp Ara chans*`)
+				    costum('[❗] LOADING!', text, tescuk, ari)
+				    attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
+				    ara.sendMessage(from, attp2, sticker, {quoted: raa})
+					await limitAdd(sender)
+			    	break
+		case 'nulis':
+				 				
+                    if (!isRegistered) return reply( ind.noregis())
+				    if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				    if (args.length < 1) return reply(ind.wrongf())
+				    ct = body.slice(6)
+				    costum('[❗] LOADING!', text, tescuk, ari)
+				    ct = await getBuffer(`https://api.zeks.xyz/api/nulis?text=${ct}&apikey=apivinz`)
+				    ara.sendMessage(from, ct, image, {caption: 'Nih kak udah jadi..', quoted: raa})
+				    await limitAdd(sender)
+				    break
+		case 'nulis2':
+	                if (!isRegistered) return reply( ind.noregis())
+				    if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				    if (args.length < 1) return reply(ind.wrongf())
+				    ct = body.slice(7)
+				    ll1 = ct.split("/")[0];
+                    ll2 = ct.split("/")[1];
+                    ll3 = ct.split("/")[2];
+                    ll4 = ct.split("/")[3];
+				    costum('[❗] LOADING!', text, tescuk, ari)
+				    ct = await getBuffer(`https://api.zeks.xyz/api/magernulis?nama=${ll1}&kelas=${ll2}&text=${ll3}&tinta=${ll4}`)
+				    ara.sendMessage(from, ct, image, {caption: 'Nih kak udah jadi..', quoted: raa})
+			        await limitAdd(sender)
+			     	break
+		case 'tahta':
+                    if (isBanned) return reply('Maaf Kamu Sudah Terbanned astagfirullah') 
+                    if (args.length == 0) return reply(`Usage: ${prefix} + command} text\nExample: ${prefix + command} Ara`) 
+                    teks = args.join(" ") 
+				    costum('[❗] LOADING!', text, tescuk, ari)
+                    buffer = await getBuffer(`https://api.zeks.xyz/api/hartatahta?text=${teks}&apikey=apivinz`) 
+                    ara.sendMessage(from, buffer, image, {caption: '_Nik kak udah jadi..._*', quoted: raa})
+			        await limitAdd(sender)
+                    break
+		case 'darkneon':
+        case 'candlemug':
+        case 'lovemsg':
+        case 'mugflower':
+        case 'narutobanner':
+        case 'paperonglass':
+        case 'romancetext':
+        case 'shadowtext':
+        case 'coffeecup':
+        case 'coffeecup2':
+        case 'glowingneon':
+        case 'underwater':
+        case 'hpotter':
+        case 'woodblock':
+                    if (!isRegistered) return reply( ind.noregis())
+                    if (isLimit(sender)) return reply(ind.limitend(pusname))
+	                if (isBanned) return reply('Maaf kamu sudah terbenned!')
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Ara`)
+                    txt = args.join(" ")
+				    costum('[❗] LOADING!', text, tescuk, ari)
+                    buffer = await getBuffer(`https://videfikri.com/api/textmaker/${command}/?text=${txt}`)
+                    ara.sendMessage(from, buffer, image, {caption: '_Nik kak udah jadi..._*', quoted: raa})
+			        await limitAdd(sender)
+                    break
+		case 'googletext':              	
+					var gh = body.slice(12)
+					var asw = gh.split("/")[0];
+					var ganz = gh.split("/")[1];
+					var abiez = gh.split("/")[2];
+					if (args.length < 1) return reply(`Masukkan kata \nContoh : ${prefix}googletext ara/cans/abiezz`)
+				    costum('[❗] LOADING!', text, tescuk, ari)
+					ari = await getBuffer(`https://videfikri.com/api/textmaker/gsuggest/?text1=${asw}&text2=${ganz}&text3=${abiez}`)
+					ara.sendMessage(from, asw, image, {quoted: raa})
+					await limitAdd(sender)
+				    break
+        case 'glitchtext':					
+					var gh = body.slice(12)
+					var gli = gh.split("/")[0];
+					var tch = gh.split("/")[1];
+					if (args.length < 1) return reply(`Masukkan kata \nContoh : ${prefix}glitchtext Ara/Cans`)
+				    costum('[❗] LOADING!', text, tescuk, ari)
+					buffer = await getBuffer(`https://api.zeks.xyz/api/gtext?text1=${gli}&text2=${tch}&apikey=apivinz`)
+					ara.sendMessage(from, buffer, image, {quoted: raa})
+					await limitAdd(sender)
+
+  //////////////////////////
+ // CASE SERTIFIKAT MENU //
+//////////////////////////
+
+	    case 'haram':
+                    if (isBanned) return reply('Maaf kamu sudah terbenned astagfirullah!')
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Kamu`)
+                    teks = args.join(" ")
+				    costum('[❗] LOADING!', text, tescuk, ari)
+                    buffer = await getBuffer(`http://rzky.net/docs/api/AnakHaramSerti/img.php?nama=${teks}`) 
+                    ara.sendMessage(from, buffer, image, {caption: '_Nik kak udah jadi..._*', quoted: raa})
+			        await limitAdd(sender)
+                    break
+        case 'gay':
+                    if (isBanned) return reply('Maaf kamu sudah terbenned astagfirullah!')
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Kamu`)
+				    costum('[❗] LOADING!', text, tescuk, ari)
+                    buffer = await getBuffer(`http://onlydevcity.xyz/GaySerti/img.php?nama=${args[0]}`) 
+                    ara.sendMessage(from, buffer, image, {caption: '_Nik kak udah jadi..._*', quoted: raa})
+			        await limitAdd(sender)
+                    break
+        case 'editod':
+                    if (isBanned) return reply('Maaf kamu sudah terbenned astagfirullah!')
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Kamu`)
+                    teks = args.join(" ") 
+				    costum('[❗] LOADING!', text, tescuk, ari)
+                    buffer = await getBuffer(`http://rzky.net/docs/api/EditorBerkelasSerti/img.php?nama=${teks}`) 
+                    ara.sendMessage(from, buffer, image, {caption: '_Nik kak udah jadi..._*', quoted: raa})
+			        await limitAdd(sender)
+                    break
+        case 'hekerserti':
+                    if (isBanned) return reply('Maaf kamu sudah terbenned astagfirullah!')
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Kamu`)
+                    teks = args.join(" ") 
+				    costum('[❗] LOADING!', text, tescuk, ari)
+                    buffer = await getBuffer(`http://rzky.net/docs/api/HekerSerti/img.php?nama=${teks}`) 
+                    ara.sendMessage(from, buffer, image, {caption: '_Nik kak udah jadi..._*', quoted: raa})
+			        await limitAdd(sender)
+                    break
+        case 'ffserti':
+                    if (isBanned) return reply('Maaf kamu sudah terbenned astagfirullah!')
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Kamu`)
+                    teks = args.join(" ") 
+				    costum('[❗] LOADING!', text, tescuk, ari)
+                    buffer = await getBuffer(`http://rzky.net/docs/api/FFSerti/img.php?nama=${teks}`) 
+                    ara.sendMessage(from, buffer, image, {caption: '_Nik kak udah jadi..._*', quoted: raa})
+			        await limitAdd(sender)
+                    break
+        case 'ffserti2':
+                    if (isBanned) return reply('Maaf kamu sudah terbenned astagfirullah!')
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Kamu`)
+                    teks = args.join(" ") 
+				    costum('[❗] LOADING!', text, tescuk, ari)
+                    buffer = await getBuffer(`http://rzky.net/docs/api/FFSerti4/img.php?nama=${teks}`) 
+                    ara.sendMessage(from, buffer, image, {caption: '_Nik kak udah jadi..._*', quoted: raa})
+			        await limitAdd(sender)
+                    break
+        case 'mlserti':
+                    if (isBanned) return reply('Maaf kamu sudah terbenned astagfirullah!')
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Kamu`)
+                    teks = args.join(" ") 
+				    costum('[❗] LOADING!', text, tescuk, ari)
+                    buffer = await getBuffer(`http://rzky.net/docs/api/MLTourSerti2/img.php?nama=${teks}`) 
+                    ara.sendMessage(from, buffer, image, {caption: '_Nik kak udah jadi..._*', quoted: raa})
+			        await limitAdd(sender)
+                    break
+        case 'pubgserti':
+                    if (isBanned) return reply('Maaf kamu sudah terbenned astagfirullah!')
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} text\nExample: ${prefix + command} Kamu`)
+                    teks = args.join(" ") 
+				    costum('[❗] LOADING!', text, tescuk, ari)
+                    buffer = await getBuffer(`http://rzky.net/docs/api/PubgTourSerti3/img.php?nama=${teks}`) 
+                    ara.sendMessage(from, buffer, image, {caption: '_Nik kak udah jadi..._*', quoted: raa})
+			        await limitAdd(sender)
+                    break
+
+  ///////////////////
+ // CASE FUN MENU //
+///////////////////
+
+        case 'gantengcek':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					ganteng = body.slice(1)
+					const gan =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const teng = gan[Math.floor(Math.random() * gan.length)]
+					ara.sendMessage(from, 'Pertanyaan : *'+ganteng+'*\n\nJawaban : '+ teng+'%', text, { quoted: raa })
+					await limitAdd(sender)
+					break
+		case 'cantikcek':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					cantik = body.slice(1)
+					const can =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const tik = can[Math.floor(Math.random() * can.length)]
+					ara.sendMessage(from, 'Pertanyaan : *'+cantik+'*\n\nJawaban : '+ tik+'%', text, { quoted: raa })
+					await limitAdd(sender)
+					break
+        case 'sangecek':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					sange = body.slice(1)
+					const sang =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const nge = sang[Math.floor(Math.random() * sang.length)]
+					ara.sendMessage(from, 'Pertanyaan : *'+sange+'*\n\nJawaban : '+ nge+'%', text, { quoted: raa })
+					await limitAdd(sender)
+					break
+        case 'gaycek':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					gayy = body.slice(1)
+					const gay =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const yag = gay[Math.floor(Math.random() * gay.length)]
+					ara.sendMessage(from, 'Pertanyaan : *'+gayy+'*\n\nJawaban : '+ yag+'%', text, { quoted: raa })
+					await limitAdd(sender)
+					break
+        case 'lesbicek':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					lesbii = body.slice(1)
+					const lesbi =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const bi = lesbi[Math.floor(Math.random() * lesbi.length)]
+					ara.sendMessage(from, 'Pertanyaan : *'+lesbii+'*\n\nJawaban : '+ bi+'%', text, { quoted: raa })
+					await limitAdd(sender)
+					break
+		case 'watak':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					watak = body.slice(1)
+					const wa =['Penyayang','Pemurah','Pemarah','Pemaaf','Penurut','Baik','Baperan','Baik Hati','penyabar','UwU','top deh, pokoknya','Suka Membantu']
+					const tak = wa[Math.floor(Math.random() * wa.length)]
+					ara.sendMessage(from, 'Pertanyaan : *'+watak+'*\n\nJawaban : '+ tak, text, { quoted: raa })
+					await limitAdd(sender)
+			        break
+		case 'hobby':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+			     	if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					hobby = body.slice(1)
+					const hob =['Memasak','Membantu Atok','Mabar','Nobar','Sosmedtan','Membantu Orang lain','Nonton Anime','Nonton Drakor','Naik Motor','Nyanyi','Menari','Bertumbuk','Menggambar','Foto fotoan Ga jelas','Maen Game','Berbicara Sendiri']
+					const by = hob[Math.floor(Math.random() * hob.length)]
+					ara.sendMessage(from, 'Pertanyaan : *'+hobby+'*\n\nJawaban : '+ by, text, { quoted: raa })
+					await limitAdd(sender)
+					break
+		case 'bisakah':
+                 if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					bisakah = body.slice(1)
+					const bisa =['Bisa','Tidak Bisa','Coba Ulangi']
+					const keh = bisa[Math.floor(Math.random() * bisa.length)]
+					ara.sendMessage(from, 'Pertanyaan : *'+bisakah+'*\n\nJawaban : '+ keh, text, { quoted: raa })
+					await limitAdd(sender)
+					break
+		case 'kapankah':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					kapankah = body.slice(1)
+					const kapan =['Besok','Lusa','1 Hari Lagi','2 Hari Lagi','3 Hari Lagi','4 Hari Lagi','5 Hari Lagi','6 Hari Lagi','1 Bulan Lagi','2 Bulan Lagi','3 Bulan Lagi','4 Bulan Lagi','5 Bulan Lagi','6 Bulan Lagi','7 Bulan Lagi','8 Bulan Lagi','9 Bulan Lagi','10 Bulan Lagi','11 Bulan Lagi','1 Tahun lagi','2 Tahun lagi','3 Tahun lag0i','4 Tahun lagi','5 Tahun lagi','6 Tahun lagi','7 Tahun lagi','8 Tahun lagi','9 Tahun lagi','10 Tahun lagi']
+					const koh = kapan[Math.floor(Math.random() * kapan.length)]
+					ara.sendMessage(from, 'Pertanyaan : *'+kapankah+'*\n\nJawaban : '+ koh, text, { quoted: raa })
+					await limitAdd(sender)
+					break
+		case 'apakah':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					apakah = body.slice(1)
+					const apa =['Iya','Tidak','Bisa Jadi','Coba Ulangi']
+					const kah = apa[Math.floor(Math.random() * apa.length)]
+					ara.sendMessage(from, 'Pertanyaan : *'+apakah+'*\n\nJawaban : '+ kah, text, { quoted: raa })
+					await limitAdd(sender)
+					break
+		case 'bagaimanakah':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					bagaimanakah = body.slice(1)
+					const bagai =['Kita Kenal?','Nanya Terus deh','Tidak Tahu','Coba Ulangi','Cari Aja Sendiri','Kurang Tahu','Mana Saya Tahu, Saya kan ikan']
+					const mana = bagai[Math.floor(Math.random() * bagai.length)]
+					ara.sendMessage(from, 'Pertanyaan : *'+bagaimanakah+'*\n\nJawaban : '+ mana, text, { quoted: raa })
+					await limitAdd(sender)
+					break
+		case 'rate':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					rate = body.slice(1)
+					const ra =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const te = ra[Math.floor(Math.random() * ra.length)]
+					ara.sendMessage(from, 'Pertanyaan : *'+rate+'*\n\nJawaban : '+ te+'%', text, { quoted: raa })
+					await limitAdd(sender)
+					break
+        case 'fitnah':
+			     	if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					if (!isOwner) return reply(ind.ownerb())
+	            	if (!isGroup) return reply(ind.groupo())                 
+		    		if (args.length < 1) return reply(`Masukkan teks \nContoh : ${prefix}fitnah @tagmember&hallo&hallo juga`)
+		    		var gh = body.slice(8)
+			    	mentioned = raa.message.extendedTextMessage.contextInfo.mentionedJid
+					var replace = gh.split("&")[0];
+					var target = gh.split("&")[1];
+					var bot = gh.split("&")[2];
+					ara.sendMessage(from, `${bot}`, text, {quoted: { key: { fromMe: false, participant: `${mentioned}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target}` }}})
+					await limitAdd(sender) 
+					break		
+		case 'alay':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+			    	if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					if (args.length < 1) return reply('Kak kasih teks lah...')
+					data = await fetchJson(`https://api.zeks.xyz/api/alaymaker?kata=${body.slice(6)}&apikey=apivinz`)
+					reply(data.result)
+				    await limitAdd(sender)
+					break
+		case 'fml':	
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+			    	if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					data = await fetchJson(`https://tobz-api.herokuapp.com/api/randomfmylife?apikey=BotWeA`)
+					hasil = data.result
+					reply(hasil)
+					await limitAdd(sender)
+					break	
+		case 'katacinta':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+			    	if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					gatauda = body.slice(8)
+					anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/katacinta`, {method: 'get'})
+					reply(anu.result)
+					await limitAdd(sender)
+					break
+		case 'pantun':
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					gatauda = body.slice(8)					
+					anu = await fetchJson(`https://api.zeks.xyz/api/pantun?apikey=apivinz`, {method: 'get'})
+					reply(anu.result.pantun)
+					await limitAdd(sender)
+					break
+        case 'hilih':
+                    if (args.length < 1) return reply('Kak masukin teks lah....') 
+                    anu = await fetchJson(`https://videfikri.com/api/hilih/?query=${body.slice(7)}`)
+                    anu1 = `${anu.result.kata}`
+                    ara.sendMessage(from, anu1, text, {quoted: raa})
+		case 'hurufterbalik': 
+                    if (args.length < 1) return reply('Kak masukin teks lah....') 
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+                    if (!isRegistered) return reply( ind.noregis())
+					gatauda = body.slice(14)
+					anu = await fetchJson(`https://videfikri.com/api/hurufterbalik/?query=${gatauda}`, {method: 'get'})
+					reply(anu.result.kata)
+					await limitAdd(sender)
+					break
+        case 'sim': 
+        case 'simsimi':
+        case 'simi':
+                    if (args.length < 1) return reply('Kak masukin teks lah....')
+                    anu = await fetchJson(`https://videfikri.com/api/simsimi?teks=${body.slice(9)}`)
+                    anu1 = `${anu.result.pesan}`
+                    ara.sendMessage(from, anu1, text, {quoted: raa})
+                    break
+                    
+  ////////////////////////
+ // CASE DOWNLOAD MENU //
+////////////////////////
+
+        case 'ytmp3':
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+	                if (args.length < 1) return reply('Kak masukin url/link yt lah...') 
+				    costum('[❗] LOADING!', text, tescuk, ari)
+					anu = await fetchJson(`https://videfikri.com/api/ytmp3/?url=${args[0]}`, {method: 'get'})
+					anu1 = await getBuffer(anu.result.thumbnail)
+					anu2 = `➤ *JUDUL* : ${anu.result.judul}\n`
+					anu2 += `➤ *SIZE* : ${anu.result.size}\n`
+					anu2 += `➤ *ID* : ${anu.result.id}\n`
+					anu2 += `➤ *URL* : ${anu.result.url}\n`
+					anu2 += `➤ *TYPE* : ${anu.result.extension}\n`
+					anu2 += `➤ *LINK* : ${anu.result.source}\n`
+					anu2 += `➤ *SOUND SEDANG DIKIRIM*\n`
+					ara.sendMessage(from, anu1, image, {caption: anu2, quoted: raa})					
+					anu3 = await getBuffer(anu.result.url)
+					ara.sendMessage(from, anu3, audio, {mimetype: 'audio/mp4', filename: `${anu.result.judul}.mp3`, quoted: raa})
+					break 
+        case 'ytmp4':
+                    if (!isRegistered) return reply( ind.noregis())
+                    if (isBanned) return reply('```Lu kebanned kontol```')
+                    if (args.length < 1) return reply('Kak masukin url/link yt lah...')
+					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(ind.wrogf())
+				    costum('[❗] LOADING!', text, tescuk, ari)
+					anu = await fetchJson(`https://videfikri.com/api/ytmp4/?url=${args[0]}`, {method: 'get'})
+                    anu1 = await getBuffer(anu.result.imgUrl)
+                    anu2 = `➤ *JUDUL* : ${anu.result.judul}\n`
+                    anu2 += `➤ *ID* : ${anu.result.id}\n`
+                    anu2 += `➤ *LINK* : ${anu.result.source}\n`
+                    anu2 += `➤ *URL* : ${anu.result.urlVideo}\n`
+                    anu2 += `➤ *[❗] VIDEO SEDANG DIKIRIM*\n`
+                    ara.sendMessage(from, anu1, image, {caption: anu2, quoted: raa})
+                    anu3 = await getBuffer(anu.result.urlVideo)
+                    ara.sendMessage(from, anu3, video, {mimetype: 'video/mp4', quoted: raa})
+                    break 
+		case 'play':   
+                    if (!isRegistered) return reply( ind.noregis())
+				    if (isLimit(sender)) return reply(ind.limitend(pusname))
+			     	if (isBanned) return reply('Maaf kamu sudah terbenned!')
+                    if (args.length < 1) return reply('Kak masukin judul lagu lah...')
+				    costum('[❗] LOADING!', text, tescuk, ari)
+				    play = body.slice(5)
+				    anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
+				    if (anu.error) return reply('❌ *ERROR* ❌')
+			     	infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${anu.result.title}\nSource : ${anu.result.source}\nUkuran : ${anu.result.size}\n\n*TUNGGU SEBENTAR LAGI DIKIRIM MOHON JANGAN SPAM YA SAYANG*`
+				    buffer = await getBuffer(anu.result.thumbnail)
+				    ara.sendMessage(from, buffer, image, {quoted: raa, caption: infomp3})
+				    lagu = await getBuffer(anu.result.url_audio)
+				    ara.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: raa})
+				    await limitAdd(sender)
+				    break
+
+  ///////////////////////
+ // CASE RANDOM IMAGE //
+///////////////////////
+
+		case 'aesthetic':
+				gatauda = body.slice(9)
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				costum('[❗] LOADING!', text, tescuk, ari)
+				anu = await fetchJson(`https://api.zeks.xyz/api/estetikpic?apikey=apivinz`, {method: 'get'})
+				buffer = await getBuffer(anu.result.result)
+				ara.sendMessage(from, buffer, image, {quoted: raa, caption: 'Nih kak aestheticnya...'})
+				await limitAdd(sender)
+				break
+        case 'fotocewek':
+                if (!isRegistered) return reply( ind.noregis())
+			    if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				costum('[❗] LOADING!', text, tescuk, ari)
+	            const cangti = ['https://i.ibb.co/1T1DCz7/cewek-thailand-20200325-007-non-fotografer-kly.jpg','https://i.ibb.co/FsJ6jjs/kucing2.jpg','https://i.ibb.co/vvkdS7n/kucing3.jpg','https://i.ibb.co/1QHWxts/kucing4.jpg','https://i.ibb.co/JQmRz4n/kucing5.jpg','https://i.ibb.co/tBwrFkG/kucing6.jpg','https://i.ibb.co/dp0YhYm/kucing7.jpg','https://i.ibb.co/R03smZT/kucing8.jpg','https://i.ibb.co/17tw0dp/kucing9.jpg','https://i.ibb.co/7XdGGqc/kucing10.jpg','https://i.ibb.co/XL9PZxg/kucing11.jpg','https://i.ibb.co/gyjvXWN/kucing12.jpg','https://i.ibb.co/R4gg4wH/kucing13.jpg','https://i.ibb.co/PmLYtFm/kucing14.jpg','https://i.ibb.co/XbSDh47/kucing15.jpg','https://i.ibb.co/kSXNJzt/kucing16.jpg']
+                let cangtip = cangti[Math.floor(Math.random() * cangti.length)]
+                ara.sendMessage(from, cangtip, image, {quote:raa})
+			    await limitAdd(sender)
+                break
+		case 'doraemon':
+                if (!isRegistered) return reply( ind.noregis())
+			    if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				costum('[❗] LOADING!', text, tescuk, ari)
+				data = await fetchJson(`https://api.fdci.se/rep.php?gambar=doraemon`, {method: 'get'})
+				reply(ind.wait())
+				n = JSON.parse(JSON.stringify(data));
+				nimek =  n[Math.floor(Math.random() * n.length)];
+				pok = await getBuffer(nimek)
+				ara.sendMessage(from, pok, image, { quoted: raa })
+				await limitAdd(sender)
+				break
+        case 'cecan':
+                tels = body.slice(5)
+                ara.updatePresence(from, Presence.composing)
+                ty = ["ulzhang girl",
+                "cewek cantik",
+                "cewe hijab",
+                "cewe rusia cantik",
+                "cewe jepang cantik",
+                "cecan indo"]
+                nk = ty[Math.floor(Math.random() * ty.length)]
+                try {
+                data = await fetchJson(`https://api.fdci.se/sosmed/rep.php?gambar=${nk}`, {
+                method: 'get'
+                })
+				costum('[❗] LOADING!', text, tescuk, ari)
+                n = JSON.parse(JSON.stringify(data));
+                nimek = n[Math.floor(Math.random() * n.length)];
+                pok = await getBuffer(nimek)
+                ara.sendMessage(from, pok, image, {quoted: raa, caption: `Gimana kak...?`
+                })
+                } catch {
+                reply(mess.ferr)
+                }
+                break
+        case 'cogan': 
+                ara.updatePresence(from, Presence.composing)
+                uk = ["ulzhang boy","cowok keren","cowo ganteng","cogan","cogan jawa"]
+                nk = uk[Math.floor(Math.random() * uk.length)]
+                try {
+                data = await fetchJson(`https://api.fdci.se/sosmed/rep.php?gambar=${nk}`, {
+                method: 'get'
+                })
+				costum('[❗] LOADING!', text, tescuk, ari)
+                n = JSON.parse(JSON.stringify(data));
+                nimek = n[Math.floor(Math.random() * n.length)];
+                pok = await getBuffer(nimek)
+                ara.sendMessage(from, pok, image, {
+                quoted: raa, caption: `Gimana kak.....?`
+                })
+                } catch {
+                reply(mess.ferr)
+                }
+                break
+		case 'pokemon':
+                if (!isRegistered) return reply( ind.noregis())
+			    if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=pokemon`, {method: 'get'})
+				costum('[❗] LOADING!', text, tescuk, ari)
+				var n = JSON.parse(JSON.stringify(anu));
+				var nimek =  n[Math.floor(Math.random() * n.length)];
+				pok = await getBuffer(nimek)
+				ara.sendMessage(from, pok, image, { quoted: raa })
+				await limitAdd(sender)
+				break
+        case 'kucing':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=kucing`, {method: 'get'})
+				costum('[❗] LOADING!', text, tescuk, ari)
+				var n = JSON.parse(JSON.stringify(anu));
+				var nimek =  n[Math.floor(Math.random() * n.length)];
+				pok = await getBuffer(nimek)
+				ara.sendMessage(from, pok, image, { quoted: raa })
+				await limitAdd(sender)
+				break
+		case 'hamster':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				ara.updatePresence(from, Presence.composing) 
+				data = await fetchJson(`https://api.fdci.se/rep.php?gambar=aesthetic-hamsters`, {method: 'get'})
+				costum('[❗] LOADING!', text, tescuk, ari)
+				n = JSON.parse(JSON.stringify(data));
+				nimek =  n[Math.floor(Math.random() * n.length)];
+				pok = await getBuffer(nimek)
+				ara.sendMessage(from, pok, image, { quoted: raa })
+				await limitAdd(sender)
+				break
+		case 'kelinci':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				ara.updatePresence(from, Presence.composing) 
+				data = await fetchJson(`https://api.fdci.se/rep.php?gambar=aesthetic-rabbit`, {method: 'get'})
+				costum('[❗] LOADING!', text, tescuk, ari)
+				n = JSON.parse(JSON.stringify(data));
+				nimek =  n[Math.floor(Math.random() * n.length)];
+				pok = await getBuffer(nimek)
+				ara.sendMessage(from, pok, image, { quoted: raa })
+				await limitAdd(sender)
+				break
+		case 'freefireimg':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=freefire`, {method: 'get'})
+				costum('[❗] LOADING!', text, tescuk, ari)
+				var n = JSON.parse(JSON.stringify(anu));
+				var nimek =  n[Math.floor(Math.random() * n.length)];
+				pok = await getBuffer(nimek)
+				ara.sendMessage(from, pok, image, { quoted: raa })
+				await limitAdd(sender)
+				break
+		case 'ww2':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=ww2`, {method: 'get'})
+				costum('[❗] LOADING!', text, tescuk, ari)
+				var n = JSON.parse(JSON.stringify(anu));
+				var nimek =  n[Math.floor(Math.random() * n.length)];
+				pok = await getBuffer(nimek)
+				ara.sendMessage(from, pok, image, { quoted: raa })
+				await limitAdd(sender)
+				break
+		case 'shota':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				costum('[❗] LOADING!', text, tescuk, ari)
+				try {
+			    res = await fetchJson(`https://tobz-api.herokuapp.com/api/randomshota?apikey=BotWeA`)
+				buffer = await getBuffer(res.image)
+				ara.sendMessage(from, buffer, image, {quoted: raa, caption: 'Ingat! Cintai husbumu'})
+				} catch (e) {
+				console.log(`Error :`, color(e,'red'))
+				reply('❌ *ERROR* ❌')
+				}
+				await limitAdd(sender)
+				break
+		case 'mobil':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				ara.updatePresence(from, Presence.composing) 
+				data = await fetchJson(`https://api.fdci.se/rep.php?gambar=cars`, {method: 'get'})
+				costum('[❗] LOADING!', text, tescuk, ari)
+				n = JSON.parse(JSON.stringify(data));
+				nimek =  n[Math.floor(Math.random() * n.length)];
+				pok = await getBuffer(nimek)
+				ara.sendMessage(from, pok, image, { quoted: raa })
+				await limitAdd(sender)
+				break
+		case 'motor':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				ara.updatePresence(from, Presence.composing) 
+				data = await fetchJson(`https://api.fdci.se/rep.php?gambar=motorcycle`, {method: 'get'})
+				costum('[❗] LOADING!', text, tescuk, ari)
+				n = JSON.parse(JSON.stringify(data));
+				nimek =  n[Math.floor(Math.random() * n.length)];
+				pok = await getBuffer(nimek)
+				ara.sendMessage(from, pok, image, { quoted: raa })
+				await limitAdd(sender)
+				break
+	    case 'stickergif':
+		case 'stikergif':
+	    case 'sgif':
+		case 'stiker': 
+		case 'sticker':
+		case 's':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				await limitAdd(sender)
+				if ((isMedia && !raa.message.videoMessage || isQuotedImage) && args.length == 0) {
+				const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(raa).replace('quotedM','m')).message.extendedTextMessage.contextInfo : raa
+				const media = await ara.downloadAndSaveMediaMessage(encmedia)
+				ran = getRandom('.webp')
+				await ffmpeg(`./${media}`)
+				.input(media)
+				.on('start', function (cmd) {
+				console.log(`Started : ${cmd}`)
+				})
+				.on('error', function (err) {
+				console.log(`Error : ${err}`)
+				fs.unlinkSync(media)
+				reply(ind.stikga())
+				})
+				.on('end', function () {
+				console.log('Finish')
+				buffer = fs.readFileSync(ran)
+				ara.sendMessage(from, buffer, sticker, {quoted: raa})
+				fs.unlinkSync(media)
+				linkSync(ran)
+				})
+				.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+				.toFormat('webp')
+				.save(ran)
+				} else if ((isMedia && raa.message.videoMessage.seconds < 11 || isQuotedVideo && raa.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
+				const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(raa).replace('quotedM','m')).message.extendedTextMessage.contextInfo : raa
+				const media = await ara.downloadAndSaveMediaMessage(encmedia)
+				ran = getRandom('.webp')
+				reply(ind.wait())
+				await ffmpeg(`./${media}`)
+				.inputFormat(media.split('.')[1])
+				.on('start', function (cmd) {
+				console.log(`Started : ${cmd}`)
+			    })  
+				.on('error', function (err) {
+				console.log(`Error : ${err}`)
+				fs.unlinkSync(media)
+				tipe = media.endsWith('.mp4') ? 'video' : 'gif'
+				reply(ind.stikga())
+				})
+		    	.on('end', function () {
+				console.log('Finish')
+				buffer = fs.readFileSync(ran)
+				ara.sendMessage(from, buffer, sticker, {quoted: raa})
+				fs.unlinkSync(media)
+				fs.unlinkSync(ran)
+			    }) 
+				.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+				.toFormat('webp')
+				.save(ran)
+				} else {
+				reply(`Kirim gambar dengan caption ${prefix}sticker atau reply/tag gambar`)
+				}
+				break
+		case 'brainly':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				brien = body.slice(9)
+				brainly(`${brien}`).then(res => {
+				teks = '❉───────────❉\n'
+				for (let Y of res.data) {
+				teks += `\n*「 _BRAINLY_ 」*\n\n*➸ Pertanyaan:* ${Y.pertanyaan}\n\n*➸ Jawaban:* ${Y.jawaban[0].text}\n❉───────────❉\n`
+				}
+				ara.sendMessage(from, teks, text, {quoted: raa, detectLinks: false})
+				console.log(res)
+				})
+				await limitAdd(sender)
+				break 
+		case 'pinterest':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				ara.updatePresence(from, Presence.composing) 
+				data = await fetchJson(`https://api.fdci.se/rep.php?gambar=${body.slice(11)}`, {method: 'get'})
+				costum('[❗] LOADING!', text, tescuk, ari)
+				n = JSON.parse(JSON.stringify(data));
+				nimek =  n[Math.floor(Math.random() * n.length)];
+				pok = await getBuffer(nimek)
+				ara.sendMessage(from, pok, image, { quoted: raa, caption: `*PINTEREST*`})
+				await limitAdd(sender)
+				break 
+		case 'bitly':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				ara.updatePresence(from, Presence.composing) 
+				data = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=${args[0]}&apikey=BotWeA`)
+				hasil = `link : ${args[0]}\n\nOutput : ${data.result}`
+				reply(hasil)
+				await limitAdd(sender)
+				break
+		case 'tinyurl':
+                ara.updatePresence(from, Presence.composing) 
+                data = await fetchJson(`https://tobz-api.herokuapp.com/api/tinyurl?url=${args[0]}&apikey=BotWeA`)
+                hasil = `link : ${args[0]}\n\nOutput : ${data.result}`
+                reply(hasil)
+                await limitAdd(sender)
+                break
+		case 'tts':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				if (args.length < 1) return ara.sendMessage(from, 'Diperlukan kode bahasa kak!!', text, {quoted: raa})
+				const gtts = require('./lib/gtts')(args[0])
+				if (args.length < 2) return ara.sendMessage(from, 'Mana teks yang mau di jadiin suara? suara setan kah?', text, {quoted: raa})
+				dtt = body.slice(8)
+				ranm = getRandom('.mp3')
+				rano = getRandom('.ogg')
+				dtt.length > 500
+				? reply('Textnya kebanyakan setan!! 😤')
+				: gtts.save(ranm, dtt, function() {
+				exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
+				fs.unlinkSync(ranm)
+				buffer = fs.readFileSync(rano)
+				if (err) return reply(ind.stikga())
+				ara.sendMessage(from, buffer, audio, {quoted: raa, ptt:true})
+				fs.unlinkSync(rano)
+				})
+			    })
+				await limitAdd(sender)
+				break
+		case 'ssweb':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				if (args.length < 1) return reply('Kak masukin url lah....d')
+				teks = body.slice(7)
+				costum('[❗] LOADING!', text, tescuk, ari)
+				anu = await fetchJson(`https://mnazria.herokuapp.com/api/screenshotweb?url=${teks}`)
+				buffer = await getBuffer(anu.gambar)
+				ara.sendMessage(from, buffer, image, {quoted: raa})
+				await limitAdd(sender)
+				break
+        case 'kbbi':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				if (args.length < 1) return reply('Kak masukin teks lah...')
+				anu = await fetchJson(`https://mnazria.herokuapp.com/api/kbbi?search=${body.slice(6)}`, {method: 'get'})
+				reply('Menurut Kbbi:\n\n'+anu.result)
+				await limitAdd(sender)
+				break
+        case 'memeindo':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				gatauda = body.slice(8)
+				costum('[❗] LOADING!', text, tescuk, ari)
+				anu = await fetchJson(`https://api.zeks.xyz/api/memeindo?apikey=apivinz`, {method: 'get'})
+				buffer = await getBuffer(anu.result)
+				ara.sendMessage(from, buffer, image, {quoted: raa})
+				await limitAdd(sender)
+				break
+		case 'lirik': 
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+                if (!isRegistered) return reply( ind.noregis())
+				teks = body.slice(6)
+				costum('[❗] LOADING!', text, tescuk, ari)
+				anu = await fetchJson(`https://videfikri.com/api/liriklagu/?query=${teks}`, {method: 'get'})
+				hasil = `➤ *JUDUL* : ${anu.result.title}\n➤ *ARTIS* : ${anu.result.artistl}\n➤ LIRIK : \n${anu.result.lirik}`
+			    ara.sendMessage(from, hasil, text, {quoted: raa})
+		        await limitAdd(sender)
+				break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             default:
          if (body.startsWith(`${prefix}${command}`)) {
         reply(`*${pushname}*, Command *${prefix}${command}* Tidak Ada Di Dalam *${prefix}menu* ${cr}`)
