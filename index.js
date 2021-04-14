@@ -904,6 +904,9 @@ ara.on('group-participants-update', async (anu) => {
 ┣► *${prefix}kick [@tag]*
 ┣► *${prefix}group [open/close]*
 ┣► *${prefix}antilinkgc [1/0]*
+┣► *${prefix}addbadword*
+┣► *${prefix}listbadword*
+┣► *${prefix}delbadword*
 ┣► *${prefix}tagall*
 ┣► *${prefix}hidetag*
 ┣► *${prefix}setname*
@@ -941,6 +944,7 @@ ara.on('group-participants-update', async (anu) => {
 ┣► *${prefix}bcc*
 ┣► *${prefix}bcgc*
 ┣► *${prefix}clearall*
+┣► *${prefix}wakillist*
 ┗━━━━━━━━━━━►
 ┏━━► *「 INFORMATION 」* 
 ┣► *${prefix}covidindo*
@@ -1005,6 +1009,7 @@ ara.on('group-participants-update', async (anu) => {
 ┣► *${prefix}ytmp3*
 ┣► *${prefix}ytmp4*
 ┣► *${prefix}play*
+┣► *${prefix}joox*
 ┗━━━━━━━━━━━►
 ┏━━► *「 RANDOM IMAGE 」* 
 ┣► *${prefix}aesthetic*
@@ -1033,6 +1038,34 @@ ara.on('group-participants-update', async (anu) => {
 ┣► *${prefix}sticker*
 ┣► *${prefix}lirik*
 ┣► *${prefix}memeindo*
+┗━━━━━━━━━━━►
+┏━━► *「 ANIME MENU 」* 
+┣► *${prefix}animeboy*
+┣► *${prefix}animegirl*
+┣► *${prefix}animeimg*
+┣► *${prefix}neko*
+┣► *${prefix}loli*
+┣► *${prefix}kusonime*
+┗━━━━━━━━━━━►
+┏━━► *「 QUOTES MENU 」* 
+┣► *${prefix}quotesislami*
+┣► *${prefix}quotesnasehat*
+┣► *${prefix}quoteskehidupan*
+┗━━━━━━━━━━━►
+┏━━► *「 LIMIT MENU 」* 
+┣► *${prefix}limit*
+┣► *${prefix}buylimit*
+┣► *${prefix}buypremiumlimit*
+┣► *${prefix}transfer*
+┣► *${prefix}leaderboard*
+┗━━━━━━━━━━━►
+┏━━► *「 OTHER 」*
+┣► *${prefix}wame*
+┣► *${prefix}ocr*
+┣► *${prefix}kalkulator*
+┣► *${prefix}toimg*
+┣► *${prefix}resepmasakan*
+┣► *${prefix}mutual*
 ┗━━━━━━━━━━━►
 
 ┏━━► *「 THANKS TO 」* 
@@ -1113,10 +1146,11 @@ ara.on('group-participants-update', async (anu) => {
 					teks += `*Total* : ${blocked.length}`
 					ara.sendMessage(from, teks.trim(), extendedText, {quoted: raa, contextInfo: {"mentionedJid": blocked}})
 					break
-		case 'ping':
-                    if (!isRegistered) return reply( ind.noregis())
-					await ara.sendMessage(from, `Pong!!!!\nSpeed: ${processTime(time, moment())} _Second_`)
-					break
+         	case 'ping':
+          	if (!isRegistered) return reply(ind.noregis())
+	    	if (isBanned) return reply(ind.baned())
+           	await ara.sendMessage(from, '*Pong!!!!*')
+	      	break
 		case 'buypremium':
                     if (!isRegistered) return reply( ind.noregis())
 				    if (isBanned) return reply('Kamu sudah terbenned!')
@@ -1164,7 +1198,7 @@ ara.on('group-participants-update', async (anu) => {
                     anu1 = await getBuffer(anu.result.soal_gbr)
                     anu2 = `► *JAWABAN* : ${anu.result.jawaban}`
                     setTimeout( () => {
-                    ara.sendMessage(from, anu1, image,{caption: 'JAWAB KAK... WAKTU 60 DETIK', quoted: raa})
+                    ara.sendMessage(from, anu1, image,{caption: 'Jawab kak.... 60 detik cukup kan? cukup lah.. masa ga cukup? kalo gabisa mending pulang!', quoted: raa})
                     }, 1)
                     setTimeout( () => {
                     costum('50 DETIK LAGI', text)
@@ -1410,6 +1444,31 @@ ara.on('group-participants-update', async (anu) => {
                     reply(ind.satukos())
                 	}
                     break
+        case 'listbadword': 
+                    let lbw = `Ini adalah list BAD WORD\nTotal : ${bad.length}\n`
+                    for (let i of bad) {
+                        lbw += `➸ ${i.replace(bad)}\n`
+                    }
+                    await reply(lbw)
+                    break 
+        case 'addbadword': 
+                    if (!isOwner) return reply(ind.ownerb())
+                    if (!isGroupAdmins) return reply(ind.admin())
+                    if (args.length < 1) return reply( `Kirim perintah ${prefix}addbadword [kata kasar]. contoh ${prefix}addbadword ngentod`)
+                    const bw = body.slice(12)
+                    bad.push(bw)
+                    fs.writeFileSync('./database/kelompok/bad.json', JSON.stringify(bad))
+                    reply('Success Menambahkan Bad Word!')
+                    break
+        case 'delbadword': 
+                    if (!isOwner) return reply(ind.ownerb())
+                    if (!isGroupAdmins) return reply(ind.admin())
+                    if (args.length < 1) return reply( `Kirim perintah ${prefix}addbadword [kata kasar]. contoh ${prefix}addbadword ngentod`)
+                    let dbw = body.slice(12)
+                    bad.splice(dbw)
+                    fs.writeFileSync('./database/kelompok/bad.json', JSON.stringify(bad))
+                    reply('Success Menghapus BAD WORD!')
+                    break 
 		case 'simih':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isGroupAdmins) return reply(ind.admin())
@@ -1915,6 +1974,16 @@ ara.on('group-participants-update', async (anu) => {
 					reply('Sukses broadcast group')
 					}
 					break 
+          case 'wakillist':
+				neko.updatePresence(from, Presence.composing) 
+                if (!isRegistered) return reply( ind.noregis())    
+				teks = 'This is list of admin bot number :\n'
+				for (let admm of adm) {
+				teks += `~> @${admm.split('@')[0]}\n`
+				}
+				teks += `Total : ${admm.length}`
+				ara.sendMessage(from, teks.trim(), extendedText, {quoted: raa, contextInfo: {"mentionedJid": adm}})
+				break
 
   ////////////////
  // MAKER MENU //
@@ -2210,7 +2279,6 @@ ara.on('group-participants-update', async (anu) => {
 					break
         case 'fitnah':
 			     	if (isBanned) return reply('Maaf kamu sudah terbenned!')
-					if (!isOwner) return reply(ind.ownerb())
 	            	if (!isGroup) return reply(ind.groupo())                 
 		    		if (args.length < 1) return reply(`Masukkan teks \nContoh : ${prefix}fitnah @tagmember&hallo&hallo juga`)
 		    		var gh = body.slice(8)
@@ -2334,6 +2402,18 @@ ara.on('group-participants-update', async (anu) => {
 				    ara.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: raa})
 				    await limitAdd(sender)
 				    break
+          case 'joox':
+                    if (!isRegistered) return reply( ind.noregis())
+				    if (isLimit(sender)) return reply(ind.limitend(pusname))				
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				    data = await fetchJson(`https://tobz-api.herokuapp.com/api/joox?q=${body.slice(6)}&apikey=BotWeA`, {method: 'get'})
+ 				    infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${data.result.judul}\nAlbum : ${data.result.album}\nDipublikasi : ${data.result.dipublikasi}`
+			        buffer = await getBuffer(data.result.thumb)
+				    lagu = await getBuffer(data.result.mp3)
+				    ara.sendMessage(from, buffer, image, {quoted: raa, caption: infomp3})
+			     	ara.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${data.result.title}.mp3`, quoted: raa})
+				    await limitAdd(sender)
+                    break
 
   ///////////////////////
  // CASE RANDOM IMAGE //
@@ -2698,31 +2778,290 @@ ara.on('group-participants-update', async (anu) => {
 		case 'lirik': 
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
                 if (!isRegistered) return reply( ind.noregis())
+				if (args.length < 1) return reply('Kak masukin teks lah...')
 				teks = body.slice(6)
 				costum('[❗] LOADING!', text, tescuk, ari)
 				anu = await fetchJson(`https://videfikri.com/api/liriklagu/?query=${teks}`, {method: 'get'})
-				hasil = `➤ *JUDUL* : ${anu.result.title}\n➤ *ARTIS* : ${anu.result.artistl}\n➤ LIRIK : \n${anu.result.lirik}`
+				hasil = `➤ *JUDUL* : ${anu.result.title}\n➤ *ARTIS* : ${anu.result.artistl}\n➤ *LIRIK* : \n${anu.result.lirik}`
 			    ara.sendMessage(from, hasil, text, {quoted: raa})
 		        await limitAdd(sender)
 				break
 
+// CASE QUOTES MENU
 
 
+		case 'quotesislami':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				const islami =['Hal yang paling manis adalah ketika seseorang menyebutkan nama kamu di tahajjud mereka.','Ya Allah panggillah diriku dan orang tuaku ke baitullah dalam keadaan sehat walafiat.','Ya Allah semoga seseorang yang engkau jodohkan denganku adalah seseorang yang saat ini sedang aku perjuangkan.','Allah tidak pernah tidur. Semua pasti akan di balas kelak. Orang-orang jahat yang sekarang bisa tertawa karena banyak uang, berkuasa, tapi besok-besok mereka semua di balas seadil-adilnya.','Jangan putus asa, Allah tidak akan mengecewakan hambanya yang ingin memperbaiki diri.','Percayalah orang yang menasehatimu untuk sholat adalah dia yang paling mencintaimu.','Bukannya Allah tidak tahu sedihmu, Tapi Allah tahu kalau kamu itu kuat.','Bacalah Al-Quran, Ia akan menenangkan hatimu meskipun engkau tidak memahami artinya.','Saat kita sakit hati sama omongan orang, saat itu juga sebenarnya Allah ngajarin kita buat jaga omongan kita ke orang lain. Sederhana bukan?','Di dunia ini orang paling baik pun bisa dicela, dan bahkan orang paling jahat sekalipun bisa di bela.','Al-Quran adalah teman yang tidak akan mengecewakan kamu di dunia dan akhirat.','Cara Allah menjawab doa hambanya : Iyaa.. aku beri untukmu sekarang. Tunggu, aku ingin melihat dulu perjuanganmu. Tidak, aku punya yang lebih baik untukmu.','Dan Allah tidak akan mengadzab mereka selama mereka mau Memohon ampun kepada-Nya. [Al-Anfaal, 8:33]','Kesabaran itu ada dua macam : Sabar atas sesuatu yang tidak kamu ingin. Sabar menahan diri dari sesuatu yang kamu ingini. -Ali bin Abi Thalib','Ambillah kebenaran, jika kamu telah mendengarnya. Karena sungguh di atas kebenaran ada cahaya. (HR. Abu Daud)','Sholatlah agar hatimu tenang, Istighfarlah agar kecewamu hilang, Berdoalah agar bahagiamu segera datang.','Surga itu mahal.. Akan tetapi orang miskin tetap mampu membelinya, Karena harganya bukan pada Harta melainkan Taqwa.','Ya Allah... Perbaikilah lisanku, Perbaikilah hatiku, Perbaikilah akhlakku, Perbaikilah hidupku, Aamiin..','Semoga hari ini Allah memudahkan setiap urusan kita, melapangkan hati kita serta meringankan langkah kita, dalam kebaikan kita Aamiin.','Peganglah aku, bacalah aku setiap hari, karena aku akan menjadi penerang didalam kuburmu nanti. #Al-Quran','Kematian..Kamu terlalu banyak bercanda. Hingga sampai kamu lupa, kematian mungkin tidak menunggumu selesai tertawa.','Jangan khawatirkan rizkimu, karena Allah telah menjaminnya untukmu, namun khawatirkanlah amalanmu, karena Allah tidak menjamin surga-Nya untukmu..','Wahai orang-orang yang beriman! Ingatlah kepada Allah, Dengan mengingat (nama-Nya) sebanyak-banyaknya dan bertasbihlah kepada-nya pada waktu pagi dan petang.','Aku sangat ingin menjadi pemburu surga. Namun aku lupa bahwa aku juga buronan neraka.','Karena aku percaya apapun yang menjadi milikku akan tetap menjadi milikku. Sejauh apapun dia (mencoba) pergi. Sejauh apapun usaha orang lain ingin merebutnya dariku. Aku hanya perlu percaya pada Allah bahwa yang menjadi milikku tidak akan pernah menjadi milik orang lain.','Andai hidayah itu seperti buah yang bisa kubeli, maka akan kubeli berkeranjang-keranjang untuk aku bagikan kepada orang-orang yang aku cintai.','Bila kamu tidak melihatku di syurga. Tolong tanya kepada Allah dimana aku, Tolonglah aku ketika itu..','Hanya Allah yang mengerti bagaimana sulitnya menahan sabar tanpa harus bercerita panjang lebar.','Letakkan hpmu lalu ambil air wudhu, shalatlah kamu, Allah menunggu curhatan darimu.','Maafin aku Ya Allah Gara gara aku mencintai dia tapi tidak pasti, sampai aku lupa mencintai mu juga.','Akan ada saatnya setelah salam dari sholatku, tanganmu yang pertama kali kusentuh.','Mungkin maksud Tuhan mempertemukan kamu dengannya adalah, sekedar mengingatkan bahwa tidak semua yang kamu inginkan bisa kamu dapatkan.','Percayalah Seorang wanita yang mencintai Allah. Allah akan berikan lelaki terbaik untuk menjaganya.','Berterimakasihlah kepada tuhan, Yang memberimu hidup dan kehidupan.','Mungkin kamu hanya harus sedikit peka untuk menyadari petunjuk dari Tuhan atas doa-doamu.']
+				const isl = islami[Math.floor(Math.random() * islami.length)]
+				islam = await getBuffer(`https://i.ibb.co/dPnjvD3/IMG-20210127-WA0018.jpg`)
+				ara.sendMessage(from, islam, image, { quoted: raa, caption: '*Quotes Islami*\n\n'+ isl })
+				await limitAdd(sender)
+				break	
+		case 'quotesnasehat':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				const nasehat =['Jangan pernah mengabaikan apapun yang terjadi, suatu saat akan sadar dan menyesal, ingat tuhan akan selalu memberikan penyesalan terakhir ...','Ingat iya.. Perilaku mu bisa mengubah perasaan seseorang.','Setia itu bukan yang selalu ada, namun saat tak bersama dia tahu hatinya milik siapa.','Kamu perlu belajar satu hal : "Menghargai seriusnya seseorang."','Jangan cari yang sempurna, Sempurnakan saja yang ada.','Ketika seseorang menghina kamu, itu adalah sebuah pujian bahwa selama ini mereka menghabiskan banyak waktu untuk memikirkan kamu, bahkan ketika kamu tidak memikirkan mereka.','Yang terbaik tidak akan hilang. Jika dia hilang maka dia bukanlah yang terbaik.','Percayalah. Suatu hari nanti pasti akan ada seseorang yang bangga memilikimu.','Tidak ada karya yang pernah dibuat oleh seorang seniman yang malas.','Jika seseorang memberimu perhatian jangan pernah mengabaikannya karena suatu saat perhatian sekecil itu kamu rindukan saat kamu kesepian.','Bersyukurlah.. Untuk segala apapun yang engkau miliki saat ini, sebab nikmat itu akan bertambah ketika kamu dapat mensyukuri apa yang telah diberi saat ini. #Buat diri ini jangan banyak mengeluh yah.','Ada perbedaan antara menyerah dan tau kapan kamu merasa cukup dalam berusaha.','Jangan sampai kesenanganmu menyusahkan orang lain. Jangan pula kesusahanmu menyenangkan orang lain.','Semakin banyak kamu memberi, semakin banyak pula yang akan kembali padamu.','Jangan pernah bandingkan akhir kesuksesan orang lain dengan pertengahan prosesmu.','Lakukan apa yang kamu bisa, dengan apa kamu miliki, dimanapun kamu berada.','Hidup memang bukan balapan, tetapi kamu memang perlu untuk terus bergerak maju.','NIKMATI HIDUPMU, LUPAKAN UMURMU.','Sebaik-baiknya permintaan maaf adalah membaiknya tingkah laku.','Belajarlah memahami bahwa tidak semua keinginan bisa terpenuhi, barangkali itu adalah obat yang terbaik untuk mencegah kecewa dan sakit hati.','Kamu akan menemukan yang terbaik, ketika kamu sudah berhenti membanding-bandingkan.','Jangan menilai orang dari masa lalunya karena kita semua sudah tidak hidup disana. Semua orang bisa berubah, biarkan mereka membuktikannya.','Jika dia tidak merasakan kehadiranmu, buat dia merasakan kepergianmu.','Orang pintar mampu memecahkan masalah. Orang bijak mampu menghindarinya.','Bersikap tidak lagi peduli lebih baik dari pada balas dendam.','Tegas akan diri sendiri, buang pikiran negatif dan lakukan yang baik. Kegelisahan hanya milik mereka yang putus asa.','Jangan pikirkan kegagalan kemarin, hari ini sudah lain, sukses pasti diraih selama semangat masih menyengat.','Memaafkanmu bukan berarti memberimu kesempatan sekali lagi.','Berubah menjadi lebih baik adalah pilihan. Tapi, merasa paling baik adalah kesalahan.','Jangan pernah bandingkan dirimu dengan orang lain, tapi bandingkanlah dengan dirimu yang lalu, apakah hari ini sudah lebih baik?','Ketahuilah orang yang paling sering memberi nasihat kepadamu, itulah orang yang paling mencintai kamu.','Jangan pernah berhenti belajar, karena hidup tidak pernah berhenti mengajarkan.','Salah satu tanda dirimu tidak berakhlak adalah main HP ketika ada orang yang berbicara.','Raihlah kesuksesan yang tidak seseorangpun berfikir kamu bisa meraihnya. Buktikan pada mereka kalau kamu bisa!','Kesalahan adalah bukti nyata kalau kamu pernah mencoba. Jangan takut salah. Takutlah untuk melakukan kesalahan-kesalahan yang sama dua kalinya.','Cepat atau lambat bukan masalah. Selama kamu tetap bergerak maju, tidak ada akhirnya kamu akan tetap sampai tidak ada tujuan.','Jika kamu tidak bisa membahagiakan orang lain, Setidaknya janganlah kamu tambah dukanya.','Teruslah berusaha sampai temanmu berkata kepadamu "Sombong iya sekarang."','Ketika kamu melakukan sebuah kesalahan, Akuilah dan jangan ragu untuk meminta maaf. Tidak pernah ada satupun orang dalam sejarah yang mati tersedak karena menelan gengsinya sendiri.','Syukuri yang menyayangimu, Maafkan yang menyakitimu.','Tunjukkan keburukanmu, lalu lihat siapa yang bertahan.','Kamu boleh lelah, tetapi tidak boleh menyerah untuk selamanya.','Jangan pernah lupa bilang "Terima Kasih." Jangan pernah gengsi bilang "Maaf." Jangan pernah jadi terlalu sombong untuk bilang "Tolong."','Masa lalu tidak bisa berubah, diubah, dilupakan, ataupun di hapus. Masa lalu hanya bisa di terima','Kita ini.. sangat pintar menghakimi, Namun bodoh dalam memperbaiki diri.','Tidak peduli seberapa baiknya kamu, Kebaikan tidak akan berarti apa-apa jika kamu memberikan kepada orang yang salah.','Orang sabar selalu menang, Orang tamak selalu rugi, Orang marah selalu kalah, Orang baik selalu diuji.','Carilah tempat dimana kamu bisa dihargai, Bukan dibutuhkan. Karena banyak orang mencarimu hanya saat butuh saja, Hingga lupa bagaimana cara menghargaimu.','Melupakan orang yang melukaimu adalah hadiahmu untuk mereka. Memaafkan orang yang melukaimu adalah hadiahmu untuk dirimu sendiri.','Maafkan orang yang menyakitimu... Bukan karena mereka pantas di maafkan, Tapi karena kamu harus berbahagia.','Tetaplah kuat, Tetaplah positif, Buatlah mereka bertanya-tanya bagaimana kamu masih tetap bisa tersenyum.','Jangan meninggalkan yang pasti demi yang mungkin. Sebab semua kemungkinan, belum tentu menjadi kepastian.','Seseorang pernah berkata padaku, Merelakan bukan berarti menyerah, Tapi tidak bisa dipaksakan.','Ikuti alurnya, Nikmati prosesnya, Tuhan tau kapan kita harus bahagia.','Usia hanyalah angka, Hanya mereka yang terus berusaha yang berhasil.','Jangan pernah meremehkan siapapun! Karena sukses adalah balas dendam Terbaik.','Pria sejati.. Harus menyelesaikan apa yang sudah dimulai.','Jika kau ingin terbang, Kau harus melepaskan hal-hal yang membuatmu berat.','Siapapun yang meremehkan mu hari ini, Suatu saat harus kamu lewati.','Jangan Mencintai terlalu mudah, Jangan Percaya terlalu cepat, Jangan Berhenti terlalu dini, Jangan Berharap terlalu tinggi, Jangan Bicara terlalu banyak.','Jadilah orang baik tapi jangan biarkan orang lain mengambil keuntungan dari mu. Ketahuilah kapan kamu harus bilang tidak.','Sahabat sejati adalah mereka tau semua kelemahan mu, Tapi tidak menggunakan nya untuk menjatuhkan mu.','Ada tiga hal yang harus dimiliki dalam hidup yaitu : Perubahan, Pilihan dan Prinsip.','Orang bodoh mengira dirinya bijak. orang bijak tau dirinya bodoh.','Jatuh cintalah seperlunya.. Kemudian patah hatilah secukupnya. Karena semua ada porsinya, Karena semua ada masanya.','Kita tidak pernah tau jalan hidup seseorang.. Maka ada baiknya jika kita tidak menghakiminya atas keputusan dalam hidupnya.','Jangan pernah menyesal mengenal seseorang dalam hidupmu, Orang baik akan memberi mu Kebahagiaan, Orang jahat akan memberi mu Pengalaman, Bahkan seburuk-buruk manusia akan memberi mu Pelajaran.','Jangan menilai kedewasaan dari usia seseorang, Karena itu bukan jaminan.']
+				const nsh = nasehat[Math.floor(Math.random() * nasehat.length)]
+				nase = await getBuffer(`https://i.ibb.co/bspYPtC/IMG-20210125-WA0018.jpg`)
+				ara.sendMessage(from, nase, image, { quoted: raa, caption: '*Quotes Nasehat*\n\n'+ nsh })
+				await limitAdd(sender)
+				break	
+		case 'quoteskehidupan':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				const quotes =['Jangan pernah mengabaikan apapun yang terjadi, suatu saat akan sadar dan menyesal, ingat tuhan akan selalu memberikan penyesalan terakhir ...','Aku percaya, suatu hari nanti, aku akan memiliki semua hal yang telah aku doa kan selama ini.','Balas dendam yang paling terbaik adalah mengubah dirimu menjadi yang lebih baik lagi.','Hidupku jauh dari kata mewah, kalau kalian lihat aku selalu senang, itu karena aku tau cara menikmati hidup.','Persahabatan bukan tentang orang yang baik didepanmu, tetapi tentang orang yang tetap baik di belakangmu.','Tidak semua bisa dimiliki. Jaga yang sudah termiliki. Tidak semua bisa diterima. Pertahankan yang sudah ada.','Mereka pikir hidupku enak, padahal aku hanya berusaha untuk tidak mengeluh.','Ibu, sebajingan apapun anakmu ini, Hatiku selalu ingin bisa Membahagiakanmu.','Tidak semua hari berjalan dengan baik tapi ada hal baik di setiap harinya.','Pikiran negatif tidak akan pernah memberi kamu kehidupan yang positif','Mereka pikir hidupku enak, padahal aku hanya berusaha untuk tidak mengeluh.','Saya percaya bahwa satu-satunya keberanian yang dibutuhkan oleh seseorang adalah keberanian untuk mengikuti impian Anda sendiri.','Arti hidup adalah menemukan hadiahmu. Tujuan hidup adalah untuk memberikannya.','Ada kalanya kita dicari ketika diperlukan, Dan dilupakan setelah dapat apa yang dia inginkan.','Aku suka tidur, Bukan karena aku pemalas Hanya saja mimpiku lebih indah dari kenyataan.','Jika kamu terlahir bukan dari keluarga kaya, Maka pastikanlah keluarga kaya berasal dari mu.','Saat kamu memberi orang lain, sesungguhnya pemberian itu adalah untukmu. Dan saat kamu mendoakan orang lain, sesungguhnya doa itu juga untukmu. Maka sibuklah membahagiakan orang lain, agar kemudian dunia akan sibuk membahagiakanmu.','Pernah salah pilih, Pernah salah jalan, Karena ego, Karena ceroboh, Tapi kalau bukan karena salah, Kita tidak akan pernah belajar.','Teruntuk hatiku semoga kamu sabar dan tabah bukan untuk hari ini, tapi untuk setiap hari.','Apapun yang kamu alami hari ini tetaplah terlihat baik-baik saja, are you oke?','Wajar kulitku hitam, Tanganku kasar, Penampilanku dekil, KARENA KEGIATANKU KERJA BUKAN MEMINTA.','Sibuklah mencintai hidupmu sampai kamu tidak punya waktu untuk membenci, menyesal, ataupun merasa takut.','AKU BAHAGIA KARENA BERSYUKUR, BUKAN BERSYUKUR KARENA BAHAGIA.','Hanya karena kamu bisa melakukan apa saja, bukan berarti kamu mampu melakukan segalanya.','Kegagalan adalah kesempatan untuk memulai lagi dengan cara yang lebih cerdas.','Dulu waktu masih kecil tidak sabar pengen jadi dewasa, tapi ketika udah besar, aku baru sadar bahwa jaman kecil lah yang paling bahagia.','Saya adalah saya, Saya bukan dia ataupun mereka Jika ingin bersama saya, Terimalah apa adanya.','Online ku sangatlah santai ada yang chat ya syukur, tidak ada yang chat ya tidur.','Kamu tidak begitu dalam mengenaliku, jadi tolong berhentilah sok tau tentang hidup ku.','Saya terlahir dari keluarga sederhana jadi maaf kalau penampilan saya apa adanya.','Dirimu sebenarnya adalah apa yang kamu lakukan di saat tiada orang yang melihatmu.','Ada dua pilihan hidup di pagi hari. Kembali tidur untuk melanjutkan mimpi, atau bangun tidur untuk mewujudkan mimpi.','Orang yang dibelakangku membicarakan diriku, keadaanku, keburukanku, mungkin ia membahayakan dalam duniaku tapi yang jelas ia bermanfaat untuk akhiratku, maka biarlah ia meneruskannya. *#Jangan lupa tersenyum untuk setiap harinya*','Lupakanlah masalahmu sejenak, dan berbahagialah kamu.','Mencintai memang tentang penerimaan. Tapi bukan untuk dibodohi.','Hidup adalah keseimbangan antara menggenggam dan melepaskan.','Jalanan yang sulit seringkali membawamu ke tujuan yang paling indah.','Kita tidak gagal. Kita hanya telah belajar dari 1000 cara yang salah.','Kalau kamu menginginkan sesuatu yang belum pernah kamu miliki, kamu harus melakukan sesuatu yang belum pernah kamu lakukan.','Jangan berhenti sebelum kamu bangga dengan dirimu sendiri.','Siapapun yang kamu cari.. Percayalah, dia juga sedang mencarimu.','Bahagia itu tujuan, kecewa itu jalan. Seseorang tidak akan sampai ke tujuan, tanpa melewati sebuah jalan.','Teruslah update status, setidaknya orang lain tau bahwa kamu masih hidup.','Bukan aku yang hebat. Tapi doa orang tua ku.','Kalau kamu sering disakiti orang itu artinya kamu orang baik. Ingat, cuma pohon berbuah yang dilempari batu.','Dalam hidup ini, Sadar itu penting loh, Jangan sabar mulu, CAPEK!','Kamu mempunyai banyak pilihan hidup untuk itu, Pilihlah hanya yang bisa benar-benar menjadikanmu lebih baik.','Aku kuat karena aku pernah lemah. Aku berani karena aku pernah merasa takut. Aku bijak karena aku pernah melakukan kesalahan.','Bukan berdoa untuk meminta hidup yang lebih mudah, Tapi berdoalah untuk bisa menjadi manusia yang lebih tangguh dalam menjalani hidup.','Selalu ada kisah yang kamu tidak tau di balik setiap orang. Selalu ada alasan mengapa mereka menjadi seperti itu. Pikiran hal ini sebelum kamu mencoba menghakimi orang lain.','Orang lain hanya melihat hasil akhir tanpa pernah tau bagaimana lelahnya berproses.','Kebahagiaan bukan milik mereka yang memiliki segalanya, Tetapi untuk mereka yang bisa menghargai apa yang mereka miliki.','Aku hanya ingin diperlakukan spesial lagi.','Terkadang, Hal yang menahan mu untuk bergerak maju hanyalah Pikiranmu sendiri.','Dua hal Menggambarkan dirimu : Kesabaranmu saat tak punya apa-apa Dan Sikapmu saat memiliki segalanya.','Kita hanya bersama bukan bersatu.','Saat kamu benar Semua orang lupa Saat kamu salah Semua orang ingat','Uang memang bukan segalanya tapi Tanpa uang kehidupan ini akan susah','Bila kamu Yakin , Tak perlu ada kata Mungkin','Jadilah kuat untuk melepaskan, Dan sabar untuk apa yang layak kamu dapatkan.','Pembenci itu sangat pemilih, Mereka hanya membenci orang yang hidupnya lebih baik  daripada hidup mereka.','Pasangan adalah cerminan diri kita. Maka teruslah perbaiki diri menjadi lebih baik setiap harinya, Maka pasangan terbaikpun akan diberikan tuhan.','Persahabatan adalah berbagi suka duka dan menua bersama.','Tersenyumlah ketika melihat masa lalu yang kelam, Karena engkau telah berhasil melewatinya.','Ketika banyak permasalahan yang menghampiri dirimu janganlah meminta untuk lekas dihilangkan. Tapi mintalah agar kamu bisa kuat untuk menyelesaikan.','Kehidupanmu adalah buah dari tindakan yang kamu lakukan. Tidak ada yang bisa disalahkan selain dirimu.','Kehidupan bukanlah masalah yang harus diselesaikan namun kenyataan yang harus diambil pengalamannya.','Semoga di tahun baru, Buku baru, Penulisan yang baru dengan isi yang lebih menarik untuk diimbas kembali di penghujung cerita nanti.','Masa lalu memang menyimpan banyak kenangan, Namun itu bukan alasan untuk tidak terus melangkah ke depan.','Santailah, Nikmati saja hidup, Tersenyumlah lebih banyak, Tertawalah lebih banyak, Dan janganlah memikirkan banyak hal.','Setiap perbuatan yang membahagiakan sesama adalah suatu sikap yang mencerminkan pribadi yang mulia.','Jarang yang sadar kalau kegagalan juga merupakan kesempatan emas untuk menuju kesuksesan.','Lebih baik bekerja keras dalam kediamnya kesunyian, Biarkan nanti sukses mu yang berbicara.','Belajar dari kesalahan masa lalu merupakan salah satu langkah awal untuk maju.']
+				const quo = quotes[Math.floor(Math.random() * quotes.length)]
+				crot = await getBuffer(`https://i.ibb.co/Bj8tD93/IMG-20210126-WA0018.jpg`)
+				ara.sendMessage(from, crot, image, { quoted: raa, caption: '*Quotes Kehidupan*\n\n'+ quo })
+				await limitAdd(sender)
+				break
 
+// CASE ANIME MENU
 
+			case 'animeboy':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				costum('[❗] LOADING!', text, tescuk, ari)
+					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anime%20boy`, {method: 'get'})
+					reply(ind.wait())
+					var n = JSON.parse(JSON.stringify(anu));
+					var nimek =  n[Math.floor(Math.random() * n.length)];
+					pok = await getBuffer(nimek)
+					ara.sendMessage(from, pok, image, { quoted: raa })
+				    await limitAdd(sender)
+					break
+			case 'animegirl':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				costum('[❗] LOADING!', text, tescuk, ari)
+					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anime%20girl`, {method: 'get'})
+					reply(ind.wait())
+					var n = JSON.parse(JSON.stringify(anu));
+					var nimek =  n[Math.floor(Math.random() * n.length)];
+					pok = await getBuffer(nimek)
+					ara.sendMessage(from, pok, image, { quoted: raa })
+				    await limitAdd(sender)
+					break
+		case 'animeimg':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				costum('[❗] LOADING!', text, tescuk, ari)
+					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anime`, {method: 'get'})
+					reply(ind.wait())
+					var n = JSON.parse(JSON.stringify(anu));
+					var nimek =  n[Math.floor(Math.random() * n.length)];
+					pok = await getBuffer(nimek)
+					ara.sendMessage(from, pok, image, { quoted: raa })
+				    await limitAdd(sender)
+					break
+        case 'loli':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				costum('[❗] LOADING!', text, tescuk, ari)
+                   anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/randomloli`)
+                   ara.sendMessage(from, anu, image, {caption: `Lolinya kak`, quoted: raa})
+				   await limitAdd(sender)
+                   break
+        case 'kusonime':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				costum('[❗] LOADING!', text, tescuk, ari)
+                   F = body.slice(10)
+                   anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/kuso?q=${F}`)
+                   anu1 = `➤ *INFO* : ${anu.sinopsis}\n`
+                   reply(anu1)
+				   await limitAdd(sender)
+                   break
+        case 'neko':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				gatauda = body.slice(4)
+				costum('[❗] LOADING!', text, tescuk, ari)
+				anu = await fetchJson(`https://alfians-api.herokuapp.com/api/nekonime`, {method: 'get'})
+				buffer = await getBuffer(anu.result)
+				ara.sendMessage(from, buffer, image, {quoted: raa})
+				await limitAdd(sender)
+				break
 
+// CASH LIMIT MENU
 
+		case 'limit':
+                if (!isRegistered) return reply( ind.noregis())
+				checkLimit(sender)
+				break
+		case 'buylimit':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				payout = body.slice(10)
+				const koinPerlimit = 2000
+				const total = koinPerlimit * payout
+				if ( checkATMuser(sender) <= total) return reply(`Maaf uang kamu belum mencukupi. silahkan kumpulkan dan beli nanti`)
+				if ( checkATMuser(sender) >= total ) {
+				confirmATM(sender, total)
+				bayarLimit(sender, payout)
+				await reply(`*「 PEMBELIAN 」* \nSilahkan hubungi owner https://wa.me/6283803728334`)
+				} 
+				break
+		case 'buypremiumlimit':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				payout = body.slice(17)
+				const koinpremPerlimit = 500
+				const totalprem = koinpremPerlimit * payout
+				if ( checkATMuser(sender) <= totalprem) return reply(`Maaf uang kamu belum mencukupi. silahkan kumpulkan dan beli nanti`)
+				if ( checkATMuser(sender) >= totalprem ) {
+				confirmATM(sender, totalprem)
+				bayarLimit(sender, payout)
+				await reply(`*「 PEMBELIAN 」* \nSilahkan hubungi owner https://wa.me/6283803728334`)
+				} 
+				break
+		case 'transfer':
+                if (!isRegistered) return reply( ind.noregis())
+				if (!q.includes('|')) return  reply(ind.wrongf())
+              	const tujuan = q.substring(0, q.indexOf('|') - 1)
+                const jumblah = q.substring(q.lastIndexOf('|') + 1)
+                if(isNaN(jumblah)) return await reply('jumlah harus berupa angka!!')
+                if (jumblah < 5000 ) return reply(`minimal transfer 5000`)
+               	if (checkATMuser(sender) < jumblah) return reply(`uang mu tidak mencukupi untuk melakukan transfer`)
+               	const tujuantf = `${tujuan.replace("@", '')}@s.whatsapp.net`
+                fee = 0.010 *  jumblah
+                hasiltf = jumblah - fee
+                addKoinUser(tujuantf, hasiltf)
+                confirmATM(sender, jumblah)
+               	addKoinUser('6283803728334@s.whatsapp.net', fee)
+                reply(`*「 SUKSES 」*\n\nPengiriman uang telah sukses\nDari : +${sender.split("@")[0]}\nKe : +${tujuan}\njJumlah transfer : ${jumblah}\nPajak : ${fee}`)
+                break
+		case 'leaderboard':
+		case 'lb':
+				_level.sort((a, b) => (a.xp < b.xp) ? 1 : -1)
+				uang.sort((a, b) => (a.uang < b.uang) ? 1 : -1)
+				let leaderboardlvl = '-----[ *LEADERBOARD LEVEL* ]----\n\n'
+				let leaderboarduang = '-----[ *LEADERBOARD UANG* ]----\n\n'
+				let nom = 0
+				try {
+				for (let i = 0; i < 10; i++) {
+				nom++
+				leaderboardlvl += `*[${nom}]* ${_level[i].id.replace('@s.whatsapp.net', '')}\n◪  *XP*: ${_level[i].xp}\n◪  *Level*: ${_level[i].level}\n`
+				leaderboarduang += `*[${nom}]* ${uang[i].id.replace('@s.whatsapp.net', '')}\n◪  *Uang*: _Rp${uang[i].uang}_\n◪  *Limit*: ${limitawal - _limit[i].limit}\n`
+				}
+				await reply(leaderboardlvl)
+				await reply(leaderboarduang)
+				} catch (err) {
+				console.error(err)
+				await reply(`minimal 10 user untuk bisa mengakses database`)
+				}
+				break
 
+// OTHER
 
+		case 'wa.me':
+		case 'wame':
+                    if (!isRegistered) return reply( ind.noregis())
+  					if (isLimit(sender)) return reply(ind.limitend(pusname))
+  					ara.updatePresence(from, Presence.composing) 
+  					options = {
+  					text :`「 *ARA BOT WHATSAPP* 」\n\n_Request by_ : *@${sender.split("@s.whatsapp.net")[0]}\n\nYour link WhatsApp : *https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n*Or ( / )*\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*`,
+  					contextInfo: { mentionedJid: [sender] }
+  					}
+  					ara.sendMessage(from, options, text, { quoted: raa } )
+  					break
+  					if (data.error) return reply(data.error)
+  					reply(data.result)
+					await limitAdd(sender)
+  					break
+		case 'ocr': 
+                    if (!isRegistered) return reply( ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+				    if (isBanned) return reply('Maaf kamu sudah terbenned!')
+					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+					const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : raa
+					const media = await ara.downloadAndSaveMediaMessage(encmedia)
+				costum('[❗] LOADING!', text, tescuk, ari)
+					await recognize(media, {lang: 'eng+ind', oem: 1, psm: 3})
+		    		.then(teks => {
+					reply(teks.trim())
+					fs.unlinkSync(media)
+					})
+					.catch(err => {
+					reply(err.message)
+					fs.unlinkSync(media)
+							})
+					} else {
+						reply(`*Kirim foto dengan caption ${prefix}ocr*`)
+					}
+					await limitAdd(sender)
+					break
+		case 'kalkulator':
+                if (!isRegistered) return reply( ind.noregis())
+				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				if (isBanned) return reply('Maaf kamu sudah terbenned!')
+				if (args.length < 1) return reply(`[❗] Kirim perintah *${prefix}kalkulator [ Angka ]*\nContoh : ${prefix}kalkulator 12*12\n*NOTE* :\n• Untuk Perkalian Menggunakan *\n• Untuk Pertambahan Menggunakan +\n• Untuk Pengurangan Menggunakan -\n• Untuk Pembagian Menggunakan /`)
+				const Math_js = require('mathjs')
+				mtk = body.slice(12)
+				if (typeof Math_js.evaluate(mtk) !== "number") {
+				reply(`"${mtk}", Kesalahan!\n[❗] Kirim perintah *${prefix}kalkulator [ Angka ]*\nContoh : ${prefix}kalkulator 12*12\n*NOTE* :\n• Untuk Perkalian Menggunakan *\n• Untuk Pertambahan Menggunakan +\n• Untuk Pengurangan Menggunakan -\n• Untuk Pembagian Menggunakan /`)
+				} else {
+				reply(`*「 MATH 」*\n\n*Kalkulator*\n${mtk} = ${Math_js.evaluate(mtk)}`)
+				}
+				await limitAdd(sender)
+				break
+		case 'toimg':
+                if (!isRegistered) return reply( ind.noregis())
+				if (!isQuotedSticker) return reply('*Reply/Tag sticker!*')
+				costum('[❗] LOADING!', text, tescuk, ari)
+				encmedia = JSON.parse(JSON.stringify(raa).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+				media = await ara.downloadAndSaveMediaMessage(encmedia)
+				ran = getRandom('.png')
+				exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+				fs.unlinkSync(media)
+				if (err) return reply(ind.stikga())
+				buffer = fs.readFileSync(ran)
+				ara.sendMessage(from, buffer, image, {quoted: raa, caption: '*DAH JADI NGEMTOD!!* '})
+				fs.unlinkSync(ran)
+				})
+			    await limitAdd(sender)
+				break
+         case 'resepmasakan':
+                   if (args.length < 1) return reply(`[❗] CONTOH??\n*${prefix}${command} soto*`)
+                   F = body.slice(14)
+                   anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/resep?q=${F}`)
+                   anu1 = await getBuffer(anu.img)
+                   anu2 = `➤ *NAMA* : ${anu.title}\n`
+                   anu2 += `➤ *STATUS* : ${anu.langkah}\n`
+                   anu2 += `➤ *BAHAN* : ${anu.bahan}`
+                   ara.sendMessage(from, anu1, image, {caption: anu2, quoted: raa})
 
+// CASE RANDOM
 
-
-
-
-
-
-
-
+		  case 'mutual':
+                   if (!isRegistered) return reply( ind.noregis())
+				   if (isGroup) return  reply( 'Command ini tidak bisa digunakan di dalam grup!')
+				   anug = getRegisteredRandomId(_registered).replace('@s.whatsapp.net','')
+				   costum('[❗] Find partner..!', text, tescuk, ari)
+				   await reply(`wa.me/${anug}`)
+				   await reply( `Partner found: 🙉\n*${prefix}next* — find a new partner`)
+				   await limitAdd(sender)
+				   break
+		case 'next':
+                   if (!isRegistered) return reply( ind.noregis())
+			       if (isGroup) return  reply( 'Command ini tidak bisa digunakan di dalam grup!')
+				   anug = getRegisteredRandomId(_registered).replace('@s.whatsapp.net','')
+				   costum('[❗] Find partner..!', text, tescuk, ari)
+				   await reply(`wa.me/${anug}`)
+				   await reply( `Partner found: 🙉\n*${prefix}next* — find a new partner`)
+				   await limitAdd(sender)
+				   break
 
 
 
@@ -2740,8 +3079,33 @@ ara.on('group-participants-update', async (anu) => {
 
 
             default:
+			if (budy.includes(`assalamualaikum`)) {
+                  reply(`Waalaikumsalam`)
+                  }
+
+		if (budy.includes(`Assalamualaikum`)) {
+                  reply(`Waalaikumsalam`)
+                  }
+                  
+		if (budy.includes(`Assalamu'alaikum`)) {
+                  reply(`Waalaikumsalam`)
+                  }
+                  
+		if (budy.includes(`assalamu'alaikum`)) {
+                  reply(`Waalaikumsalam`)
+                  }
+	/*	if (budy.includes(`@6285852335038`)) {
+					if (!isGroup) return reply(ind.groupo())
+					setTimeout( () => {
+					ara.groupLeave (from) 
+					}, 2000)
+					setTimeout( () => {
+					ara.updatePresence(from, Presence.composing)
+					reply(`*LU NGAPA TAG GUA NGENTOD, ${pushname} GW OUT!!*`)
+					}, 0)
+				}*/
          if (body.startsWith(`${prefix}${command}`)) {
-        reply(`*${pushname}*, Command *${prefix}${command}* Tidak Ada Di Dalam *${prefix}menu* ${cr}`)
+     //   reply(`*${pushname}*, Command *${prefix}${command}* Tidak Ada Di Dalam *${prefix}menu* ${cr}`)
 		const none = fs.readFileSync('./mp3/ara.mp3');
 		ara.sendMessage(from, none, MessageType.audio, {quoted: raa, mimetype: 'audio/mp4', ptt:true})
 
