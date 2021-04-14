@@ -1,7 +1,7 @@
 {
-  "name": "AraBOT",
+  "name": "ZenoBOT",
   "version": "1.0.0",
-  "description": "Ara for whatsapp online with termux",
+  "description": "Chika for whatsapp online with termux",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -18,15 +18,15 @@
     "whatsapp",
     "bot"
   ],
-  "author": "Neko",
+  "author": "Nurul",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zer0-Tw0/Ara.git"
+    "url": "git+https://github.com/alonecans/wansap-bot-manca.git"
   },
   "bugs": {
-    "url": "https://github.com/Zer0-Tw0/Ara/issues"
+    "url": "https://github.com/alonecans/wansap-bot-manca/issues"
   },
-  "homepage": "https://github.com/Zer0-Tw0/readme.md",
+  "homepage": "https://github.com/alonecans/readme.md",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/baileys": "^3.3.0",
