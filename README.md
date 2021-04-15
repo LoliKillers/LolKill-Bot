@@ -47,3 +47,4 @@ Jangan ragu untuk membuka permintaan tarik jika anda menemukan kesalahan
 
 ## Thanks to
 * AraAra [Team]
+* ALL creator bot
