@@ -20,6 +20,8 @@ $ pkg upgrade -y
 $ pkg install bash -y
 $ pkg install git -y
 ```
+Setelah itu fork repo ini dan edi di bagian [ini](https://github.com/Zer0-Tw0/Ara/blob/da88b20120263e3460b4dcd840a4f2f82c8cfdd4/index.js#L51)
+
 ## Install ara bot
 
 ```sh
@@ -39,9 +41,7 @@ $ node index.js
 
 ## Credits 📍
 * Nah, itu semua ada dalam sejarah komit
-Jangan ragu untuk membuka permintaan tarik jika ada menemukam kesalahan
+Jangan ragu untuk membuka permintaan tarik jika anda menemukan kesalahan
 
 ## Thanks to
 * AraAra [Team]
-* [RYNZ](https://github.com/riyan3334)
-* [NAYLA](https://github.com/naylachan)
