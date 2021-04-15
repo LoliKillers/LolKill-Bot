@@ -45,6 +45,8 @@ $ node index.js
 * Nah, itu semua ada dalam sejarah komit
 Jangan ragu untuk membuka permintaan tarik jika anda menemukan kesalahan
 
+Dan tunggu update saya selanjutnya!!😁
+
 ## Thanks to
 * AraAra [Team]
 * ALL creator bot
