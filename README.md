@@ -20,7 +20,8 @@ $ pkg upgrade -y
 $ pkg install bash -y
 $ pkg install git -y
 ```
-Setelah itu fork repo ini dan edi di bagian [ini](https://github.com/Zer0-Tw0/Ara/blob/da88b20120263e3460b4dcd840a4f2f82c8cfdd4/index.js#L51)
+Setelah itu fork/gandakan repo ini dan edit di bagian [ini](https://github.com/Zer0-Tw0/Ara/blob/da88b20120263e3460b4dcd840a4f2f82c8cfdd4/index.js#L51)
+Jangan sungkan untuk bertanya bila anda masih bingung anda bisa menghubungi saya di [whats'app](https://wa.me/6283803728334)
 
 ## Install ara bot
 
