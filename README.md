@@ -8,7 +8,7 @@
 ☆ " Hanya beberapa kode yang merupakan bot untuk bersenang-senang! " ☆
 </p>
 
-* Lolkill bot Link:  <a href="https://wa.me/6285852335038" alt="Ara"> <img src="https://img.shields.io/badge/%F0%9F%A4%96%20-LolkillBot-brightgreen" /> </a>
+* Lolkill bot Link:  <a href="https://wa.me/6283803728334" alt="Ara"> <img src="https://img.shields.io/badge/%F0%9F%A4%96%20-LolkillBot-brightgreen" /> </a>
 
 Jika Anda mem-forking repo ini, jangan lupa untuk memberi tanda bintang - <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/LoliKillers/Lolkill?color=white&label=%F0%9F%8C%9F%20star">
 
@@ -24,21 +24,21 @@ Setelah itu fork/gandakan repo ini dan edit di bagian [ini](https://github.com/L
 
 Jangan sungkan untuk bertanya bila anda masih bingung anda bisa menghubungi saya di [whats'app](https://wa.me/6283803728334)
 
-## Install ara bot
+## Install Lolkill bot
 
 ```sh
 $ git clone https://github.com/LoliKillers/Lolkill
 $ cd Ara
 $ bash install.sh
-$ node index.js
+$ npm start
 
 Tinggal scan kode qr!
 ```
 ## Menjalankan bot ulang
 
 ```sh
-$ cd Ara
-$ node index.js
+$ cd Lolkill
+$ npm start
 ```
 
 ## Credits 📍
