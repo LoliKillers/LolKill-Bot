@@ -12,4 +12,4 @@ wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-oc
 
 npm install
 
-echo "[*] Semua telah di install, Untuk menjalankan ketik \"node index.js\" JANGAN LUPA FOLLOW https://github.com/Zer0-Tw0"
+echo "[*] Semua telah di install, Untuk menjalankan ketik \"npm start\" JANGAN LUPA FOLLOW https://github.com/LoliKillers"
