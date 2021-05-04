@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://coolthemestores.com/wp-content/uploads/2020/12/zero-two-feature.jpg">
+  <img src="https://wallpapercave.com/wp/wp5683626.jpg">
 </p>
 
 # LOLKILL BOT
@@ -20,7 +20,6 @@ $ pkg upgrade -y
 $ pkg install bash -y
 $ pkg install git -y
 ```
-Setelah itu fork/gandakan repo ini dan edit di bagian [ini](https://github.com/LoliKillers/Lolkill/blob/da88b20120263e3460b4dcd840a4f2f82c8cfdd4/index.js#L51)
 
 Jangan sungkan untuk bertanya bila anda masih bingung anda bisa menghubungi saya di [whats'app](https://wa.me/6283803728334)
 
@@ -28,7 +27,7 @@ Jangan sungkan untuk bertanya bila anda masih bingung anda bisa menghubungi saya
 
 ```sh
 $ git clone https://github.com/LoliKillers/Lolkill
-$ cd Ara
+$ cd Lolkill
 $ bash install.sh
 $ npm start
 
