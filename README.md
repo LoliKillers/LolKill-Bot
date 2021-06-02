@@ -2,15 +2,11 @@
   <img src="https://wallpapercave.com/wp/wp5683626.jpg">
 </p>
 
-# Rara-Self Bot
+# Loli Killers - Self Bot
 
 <p align="center">
 ☆ " Hanya beberapa kode yang merupakan bot untuk bersenang-senang! " ☆
 </p>
-
-* Rara-Self Bot Link:  <a href="https://wa.me/6283803728334" alt="Ara"> <img src="https://img.shields.io/badge/%F0%9F%A4%96%20-LolkillBot-brightgreen" /> </a>
-
-Jika Anda mem-forking repo ini, jangan lupa untuk memberi tanda bintang - <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/LoliKillers/Rara-Self?color=white&label=%F0%9F%8C%9F%20star">
 
 ## Install yang di butuhkan
 
@@ -23,21 +19,19 @@ $ pkg install git -y
 
 Jangan sungkan untuk bertanya bila anda masih bingung anda bisa menghubungi saya di [whats'app](https://wa.me/6283803728334)
 
-## Install Rara-Self Bot
+## Install LolKill Self Bot
 
 ```sh
-$ git clone https://github.com/LoliKillers/Rara-Self
-$ cd Lolkill
-$ bash install.sh
-$ npm start
+$ git clone https://github.com/LoliKillers/LolKill-Self
+$ cd LolKill-Self
+$ npm install
+$ npm start/node index.js
 
-Tinggal scan kode qr!
-```
-## Menjalankan bot ulang
+## Menjalankan ulang self bot
 
 ```sh
-$ cd Rara-Self
-$ npm start
+$ cd LolKill-Self
+$ npm start/node index.js
 ```
 
 ## Credits 📍
@@ -45,7 +39,9 @@ $ npm start
 Jangan ragu untuk membuka permintaan tarik jika anda menemukan kesalahan
 
 * Dan tunggu update saya selanjutnya!!👣
+* Mastah diem yak, jangan dibuli, namanya juga pemula stah
 
 ## Thanks to
-* AraAra [Team]
+* Mhank Bar Bar (script ori)
+* Hexagon (recode from)
 * ALL creator bot
