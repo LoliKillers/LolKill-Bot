@@ -26,6 +26,7 @@ $ git clone https://github.com/LoliKillers/LolKill-Self
 $ cd LolKill-Self
 $ npm install
 $ npm start/node index.js
+```
 
 ## Menjalankan ulang self bot
 
