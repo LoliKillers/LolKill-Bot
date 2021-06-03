@@ -899,7 +899,7 @@ module.exports = lolikiller = async (lolikiller, loli) => {
 			break
 			case 'blocklist':
 				if (!isUser) return reply(mess.only.user_bot)
-				ini_txt = `↯ [ BLOCKLIST ] ↯`
+				ini_txt = `↯ [ BLOCKLIST ] ↯\n`
 				for (let block of lolikiller.blocklist) {
 					ini_txt += `↣ wa.me/${block.split('@')[0]}\n`
 				}
