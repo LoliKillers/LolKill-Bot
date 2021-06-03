@@ -1,0 +1,53 @@
+{
+  "name": "LoliKiller",
+  "version": "1.0.0",
+  "description": "Loli Killers Self Bot",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@adiwajshing/baileys": "^3.5.0",
+    "axios": "^0.21.1",
+    "browser-id3-writer": "^4.4.0",
+    "cfonts": "^2.9.2",
+    "cheerio": "^1.0.0-rc.9",
+    "child_process": "^1.0.2",
+    "crypto": "^1.0.1",
+    "fake-useragent": "^1.0.1",
+    "file-type": "^9.0.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "form-data": "^2.3.3",
+    "image-to-base64": "^2.2.0",
+    "imgbb-uploader": "^1.3.1",
+    "jsdom": "^16.6.0",
+    "moment-timezone": "^0.5.33",
+    "ms": "^2.1.2",
+    "multistream": "^4.1.0",
+    "node-fetch": "^2.6.1",
+    "parse-ms": "^2.1.0",
+    "performance-now": "^2.1.0",
+    "qs": "^6.5.2",
+    "request": "^2.88.2",
+    "requests": "^0.3.0",
+    "spinnies": "^0.5.1",
+    "yt-search": "^2.8.0"
+  },
+  "scripts": {
+    "start": "node main",
+    "test": "supervisor main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoliKillers"
+  },
+  "keywords": [
+    "Wasu"
+  ],
+  "author": "LOLI_KILLERS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoliKillers"
+  },
+  "homepage": "https://github.com/LoliKillers"
+}
