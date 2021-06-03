@@ -59,7 +59,7 @@ const gc_verify = JSON.parse(fs.readFileSync('./database/gcverify.json'))
 
 author = 'RamRa'
 packname = 'Loli Killers'
-banChats = true
+banChats = false
 offline = false
 targetpc = '6285852335034'
 owner = '6283803728334'
@@ -356,7 +356,7 @@ module.exports = lolikiller = async (lolikiller, loli) => {
         fake = `[ ${pushname} ]\nI Don't Like you!!\nlolikiller.herokuapp.com`
         lolikiller.chatRead(from)
 
-  /*      lolikiller.on('CB:Blocklist', json => {
+     /*   lolikiller.on('CB:Blocklist', json => {
 			if (blocked.length > 2) return
 			for (let i of json[1].blocklist) {
 				blocked.push(i.replace('c.us','s.whatsapp.net'))
@@ -881,7 +881,6 @@ module.exports = lolikiller = async (lolikiller, loli) => {
 
 ↯ [ YOUR INFO ] ↯
 ↦ *Name :* ${prefix}
-↦ *Nomor :* wa/me${sender.split("@")[0]}
 
 ↯ [ ABOUT BOT ] ↯
 ↦ ${prefix}tes
@@ -890,12 +889,22 @@ module.exports = lolikiller = async (lolikiller, loli) => {
 ↦ ${prefix}runtime
 ↦ ${prefix}join (link group)
 ↦ ${prefix}info
+↣ ${prefix}blocklist
 
 ↯ [ OWNER MENU ] ↯ 
 ↦ ${prefix}public
 ↦ ${prefix}self
 `
 			fakegroup(ini_txt)
+			break
+			case 'blocklist':
+				if (!isUser) return reply(mess.only.user_bot)
+				ini_txt = `↯ [ BLOCKLIST ] ↯`
+				for (let block of lolikiller.blocklist) {
+					ini_txt += `↣ wa.me/${block.split('@')[0]}\n`
+				}
+				ini_txt += `↣ Total : ${lolikiller.blocklist.length}`
+				lolikiller.sendMessage(from, ini_txt, text,{quoted: faketoko})
 			break
 			case 'info':
 				if (!isUser) return reply(mess.only.user_bot)
@@ -910,20 +919,30 @@ module.exports = lolikiller = async (lolikiller, loli) => {
 					ini_text = `
 *↯ [ SELF BOT - INFO ] ↯ *
 
-*Bot Name :* ${me.name}
-*Bot Number :* ${me.jid}
-*Bot prefix :* [ ${prefix} ]
-*Date :* ${lolikiller.referenceDate}
-*Total Block Contact :* ${lolikiller.blocklist.length}
-*Speed :* ${ini_ping}
-*WA Version :* ${lolikiller.user.phone.wa_version}
-*Mcc :* ${lolikiller.user.phone.mcc}
-*Mnc :* ${lolikiller.user.phone.mnc}
-*Os Version :* ${lolikiller.user.phone.os_version}
-*Manufacturer :* ${lolikiller.user.phone.device_manufacturer}
-*Model :* ${lolikiller.user.phone.device_model}
-*Version :* ${lolikiller.version}
-
+↣ *Bot Name :* ${me.name}
+↣ *Bot Number :* ${me.jid}
+↣ *Bot prefix :* [ ${prefix} ]
+↣ *Date :* ${lolikiller.referenceDate}
+↣ *Total Block Contact :* ${lolikiller.blocklist.length}
+↣ *Speed :* ${ini_ping}
+↣ *WA Version :* ${me.phone.wa_version}
+↣ *Mcc :* ${me.phone.mcc}
+↣ *Mnc :* ${me.phone.mnc}
+↣ *Os Version :* ${me.phone.os_version}
+↣ *Manufacturer :* ${me.phone.device_manufacturer}
+↣ *Model :* ${me.phone.device_model}
+↣ *Version :* ${lolikiller.version}
+↣ *Requests :* ${lolikiller.pendingRequestTimeoutMs}
+↣ *State :* ${lolikiller.state}
+↣ *Auto Reconnect :* ${lolikiller.autoReconnect}
+↣ *Phone Connected :* ${lolikiller.phoneConnected}
+↣ *Message Log :* ${lolikiller.msgCount}
+↣ *Contact Checklist :* ${lolikiller.phoneCheckListeners}
+↣ *Last Seen :* ${lolikiller.lastSeen}
+↣ *Logger Level:* ${lolikiller.logger.level}
+↣ *Logger Debug:* ${lolikiller.logger.debug}
+↣ *Last Recaived Message :* ${lolikiller.lastChatsRecaived}
+↣ *The Bot Active On :* ${kyun(uptime)}
 `
 				fakestatus(ini_text)
 				})
