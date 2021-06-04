@@ -1,3 +1,6 @@
+// JADI GINI OM/TANTE/MASTAH
+// PESEN GUA CUMA SATU
+// JANGAN DI JUAL NGENTOD!!!
 const {
 	WAConnection,
 	MessageType,
