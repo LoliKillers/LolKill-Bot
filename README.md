@@ -38,11 +38,10 @@ $ npm start/node index.js
 ## Credits 📍
 * Nah, itu semua ada dalam sejarah komit
 Jangan ragu untuk membuka permintaan tarik jika anda menemukan kesalahan
-
+* Jangan lupa untuk meninhgalkan bintang ok
 * Dan tunggu update saya selanjutnya!!👣
 * Mastah diem yak, jangan dibuli, namanya juga pemula stah
 
 ## Thanks to
-* Mhank Bar Bar (script ori)
 * Hexagon (recode from)
 * ALL creator bot
