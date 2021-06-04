@@ -682,7 +682,7 @@ module.exports = lolikiller = async (lolikiller, loli) => {
 				quoted: {
 					key: {
 						fromMe: false,
-						participant: `0@s.whatsapp.net`, ...(from ? {remoteJid: "status@broadcast"}:{})
+						participant: `6283803728334@s.whatsapp.net`, ...(from ? {remoteJid: "status@broadcast"}:{})
 					},
 					message: {
 						"imageMessage": {
@@ -714,7 +714,7 @@ module.exports = lolikiller = async (lolikiller, loli) => {
 				quoted: {
 					key: {
 						fromMe: false,
-						participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6283803728334-1618835961@g.us" } : {})
+						participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6283803728334-1622723407@g.us" } : {})
 					},
 					message: {
 						"imageMessage": {
@@ -742,7 +742,7 @@ module.exports = lolikiller = async (lolikiller, loli) => {
 				quoted: {
 					key: {
 						fromMe: false,
-						participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6283803728334-1618835961@g.us" } : {})
+						participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6283803728334-1622723407@g.us" } : {})
 					},
 					message: {
 						conversation: fake
@@ -3538,15 +3538,6 @@ module.exports = lolikiller = async (lolikiller, loli) => {
 				}
 			}
 			
-			if (budy.startsWith('Tes')){
-				if (!loli.key.fromMe) return
-				try {
-					return lolikiller.sendMessage(from, `"6283803728334-1618835961@g.us"`, text,{quoted: faketoko})
-				} catch(err) {
-					e = String(err)
-					reply(e)
-				}
-			}		
 		}
 		
 		if (isGroup && budy != undefined) {
