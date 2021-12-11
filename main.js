@@ -305,6 +305,11 @@ module.exports = loli = async (loli, lol) => {
             + `\n\n*❏ STALKING*\n`
             + `${simbol} _${prefix}ghstalk (username)_\n`
             + `${simbol} _${prefix}pintstalk (username)_\n`
+            + `╙───+>\n`
+            + `\n*❏ DOWNLOADER*\n`
+            + `${simbol} _${prefix}tiktoknowm (url)_\n`
+            + `${simbol} _${prefix}ytdlmp3 (url)_\n`
+            + `${simbol} _${prefix}ytdlmp4 (url)_\n`
             + `╙───+>\n\n`
             var imgs = await loli.prepareMessage('0@c.us', _thumbnail, image, { thumbnail: _thumbnail })
             var imgCatalog = imgs.message.imageMessage
@@ -331,7 +336,7 @@ module.exports = loli = async (loli, lol) => {
             break
             case "ghstalk":
                 var username = _msg.join("")
-                if (!username) return reply(`_Exampel : ${prefix + command} LoliKillers_`)
+                if (!username) return reply(`_Example_ : ${prefix + command} LoliKillers`)
                 reply(msg.wait)
                 try {
                     var data = await fetchJson(`https://api.loli.loveslife.biz/api/github_stalk?apikey=${keyloli}&username=${username}`)
@@ -363,10 +368,10 @@ module.exports = loli = async (loli, lol) => {
             break
             case "pintstalk":
                 var username = _msg.join("")
-                if (!username) return reply(`_Exampel : ${prefix + command} Loli_Killers`)
+                if (!username) return reply(`_Example_ : ${prefix + command} Loli_Killer`)
                 reply(msg.wait)
                 try {
-                    var data = await fetchJson(`https://api.loli.loveslife.biz/api/github_stalk?apikey=${keyloli}&username=${username}`)
+                    var data = await fetchJson(`https://api.loli.loveslife.biz/api/pinterest_stalk?apikey=${keyloli}&username=${username}`)
                     var x = data.result
                     var reslt = `*Followers* : ${x.followerCount}\n`
                     + `*About* : ${x.about}\n`
@@ -377,6 +382,65 @@ module.exports = loli = async (loli, lol) => {
                     + `*Id* : ${x.id}\n`
                     var avatar = await getBuffer(data.result.thumbnail)
                     loli.sendMessage(from, avatar, image, { quoted: lol, caption: reslt })
+                } catch (err) {
+                    console.log(err)
+                    reply(msg.error)
+                }
+            break
+            case "tiktoknowm":
+                var url = _msg.join("")
+                if (!url) return reply(`_Example_ : ${prefix + command} https://www.tiktok.com/@gunxz__/video/7023791466535226651?sender_device=mobile&sender_web_id=7019783975653737985&is_from_webapp=v1&is_copy`)
+                reply(msg.wait)
+                try {
+                    var data = await fetchJson(`https://api.loli.loveslife.biz/api/tiktok_downloader?apikey=${keyloli}&url=${url}`)
+                    var ttnowm = await getBuffer(data.result.tiktokNoWm)
+                    loli.sendMessage(from, ttnowm, video, { quoted: lol })
+                } catch (err) {
+                    console.log(err)
+                    reply(msg.error)
+                }
+            break
+            case "ytdlmp3":
+                var url = _msg.join("")
+                if (!url) return reply(`_Example_ : ${prefix + command} https://youtu.be/MRQ7_QkJjiM`)
+                reply(msg.wait)
+                try {
+                    var data = await fetchJson(`https://api.loli.loveslife.biz/api/youtubedl_mp3?apikey=${keyloli}&url=${url}`)
+                    var x = data.result
+                    var txt = `*Title* : ${x.title}\n`
+                    + `*Description* : ${x.description}\n`
+                    + `*Channel* : ${x.channelName}\n`
+                    + `*Views* : ${x.viewCount}\n`
+                    + `*Category* : ${x.category}\n`
+                    + `*Publish* : ${x.publishDate}\n`
+                    + `*Upload* : ${x.uploadDate}\n`
+                    var img = await getBuffer(x.thumbnail.thumbnails)
+                    await loli.sendMessage(from, img, image, { caption: txt, quoted: lol })
+                    var music = await getBuffer(x.url)
+                    await loli.sendMessage(from, music, audio, { quoted: lol })
+                } catch (err) {
+                    console.log(err)
+                    reply(msg.error)
+                }
+            break
+            case "ytdlmp4":
+                var url = _msg.join("")
+                if (!url) return reply(`_Example_ : ${prefix + command} https://youtu.be/MRQ7_QkJjiM`)
+                reply(msg.wait)
+                try {
+                    var data = await fetchJson(`https://api.loli.loveslife.biz/api/youtubedl_mp4?apikey=${keyloli}&url=${url}`)
+                    var x = data.result
+                    var txt = `*Title* : ${x.title}\n`
+                    + `*Description* : ${x.description}\n`
+                    + `*Channel* : ${x.channelName}\n`
+                    + `*Views* : ${x.viewCount}\n`
+                    + `*Category* : ${x.category}\n`
+                    + `*Publish* : ${x.publishDate}\n`
+                    + `*Upload* : ${x.uploadDate}\n`
+                    var img = await getBuffer(x.thumbnail.thumbnails)
+                    await loli.sendMessage(from, img, image, { caption: txt, quoted: lol })
+                    var vidio = await getBuffer(x.url)
+                    await loli.sendMessage(from, vidio, video, { quoted: lol })
                 } catch (err) {
                     console.log(err)
                     reply(msg.error)
