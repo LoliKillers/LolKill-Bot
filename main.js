@@ -134,7 +134,11 @@ module.exports = loli = async (loli, lol) => {
         const sendImg = (img) => {
             loli.sendMessage(from, img, image, { quoted: lol })
         }
-
+	
+        const sendImgUrl = (url, quotod, cap) => {
+        loli.sendMessage(from, { url: url }, MessageType.image, { mimetype: Mimetype.jpg, quoted: quotod, caption: cap })
+        }
+	
         const reply = (_txt) => {
             loli.sendMessage(from, _txt, text, { quoted: lol, thumbnail: _thumbnail, sendEphemeral: true })
         }
